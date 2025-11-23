@@ -16,7 +16,9 @@ import PatientSidebar from '../../components/PatientSidebar';
 import PatientDetailCard from '../../components/PatientDetailCard';
 
 export default function PatientsPage() {
+  // --- Hooks first: ensure stable hook order on every render ---
   const { user, claims, loading } = useAuth();
+
   const [patients, setPatients] = useState([]);
   const [filtered, setFiltered] = useState([]);
   const [q, setQ] = useState('');
@@ -24,30 +26,6 @@ export default function PatientsPage() {
   const [appointments, setAppointments] = useState([]);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState(null);
-
-  // --- AUTH GUARD UI (loading / sign-in) ---
-  if (loading) {
-    return (
-      <div className="min-h-[calc(100vh-56px)] flex items-center justify-center">
-        <div className="text-sm text-slate-500">Loading authentication...</div>
-      </div>
-    );
-  }
-
-  if (!user) {
-    return (
-      <div className="min-h-[calc(100vh-56px)] flex items-center justify-center">
-        <div className="max-w-lg p-6 bg-white rounded-lg shadow">
-          <h2 className="text-lg font-semibold">Sign in required</h2>
-          <p className="mt-2 text-sm text-slate-600">You must be signed in to access the Patients area.</p>
-          <div className="mt-4 text-right">
-            <a href="/login" className="px-3 py-2 bg-indigo-600 text-white rounded">Go to login</a>
-          </div>
-        </div>
-      </div>
-    );
-  }
-  // ------------------------------------------------
 
   // Subscribe patient list
   useEffect(() => {
@@ -77,6 +55,58 @@ export default function PatientsPage() {
     const unsub = subscribeAppointmentsForPatient(claims.clinicId, selectedPatient.id, (items) => setAppointments(items), (err) => setError(err.message || String(err)));
     return () => unsub();
   }, [selectedPatient, claims]);
+
+  // --- Auth guard UI (after hooks) ---
+  if (loading) {
+    return (
+      <div className="min-h-[calc(100vh-56px)] flex items-center justify-center">
+        <div className="text-sm text-slate-500">Loading authentication...</div>
+      </div>
+    );
+  }
+
+  if (!user) {
+    return (
+      <div className="min-h-[calc(100vh-56px)] flex items-center justify-center">
+        <div className="max-w-lg p-6 bg-white rounded-lg shadow">
+          <h2 className="text-lg font-semibold">Sign in required</h2>
+          <p className="mt-2 text-sm text-slate-600">You must be signed in to access the Patients area.</p>
+          <div className="mt-4 text-right">
+            <a href="/login" className="px-3 py-2 bg-indigo-600 text-white rounded">Go to login</a>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  // If receptionist (or any other role) is not allowed, show the styled Access Denied card
+  // In your original setup receptionists can access Patients; if you want to permit different roles adjust the allowedRoles array.
+  const allowedRoles = ['admin', 'doctor', 'receptionist']; // adjust if needed
+  if (!claims?.clinicId || !allowedRoles.includes(claims.role)) {
+    return (
+      <div className="min-h-[calc(100vh-56px)] flex items-center justify-center bg-slate-50">
+        <div className="max-w-xl w-full p-6 bg-white rounded-lg shadow">
+          <h2 className="text-xl font-semibold text-slate-800">Access denied</h2>
+          <p className="mt-2 text-sm text-slate-600">Your account does not have permission to access the Patients area.</p>
+
+          <div className="mt-4 text-sm text-slate-600">
+            <p><strong>Role:</strong> {claims?.role ?? '—'}</p>
+            <p><strong>Clinic:</strong> {claims?.clinicId ?? '—'}</p>
+          </div>
+
+          <div className="mt-4 flex gap-2">
+            <button onClick={() => window.location.href = '/'} className="px-3 py-2 rounded border">Back to home</button>
+          </div>
+
+          <div className="mt-3 text-xs text-slate-400">
+            Note: Patients pages are restricted. Contact your administrator to get access.
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  // --- Functions for patient operations ---
 
   // Open create in center panel
   function handleOpenCreate() {
@@ -162,6 +192,7 @@ export default function PatientsPage() {
     } finally { setBusy(false); }
   }
 
+  // --- Render main UI ---
   return (
     <div className="min-h-[calc(100vh-56px)] bg-slate-50">
       <div className="max-w-7xl mx-auto px-4 py-8 grid grid-cols-1 lg:grid-cols-12 gap-6">

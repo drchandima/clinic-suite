@@ -1839,33 +1839,16 @@ function ConsultationPage() {
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "mt-4 flex gap-2",
-                        children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                onClick: ()=>window.location.href = '/',
-                                className: "px-3 py-2 rounded border",
-                                children: "Back to dashboard"
-                            }, void 0, false, {
-                                fileName: "[project]/clinic-suite/app/consultation/page.js",
-                                lineNumber: 96,
-                                columnNumber: 13
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                onClick: ()=>{
-                                    // helpful copy for the admin
-                                    const msg = `Please set role='doctor' and clinicId='${claims?.clinicId ?? 'clinic-001'}' for user ${user.email}`;
-                                    navigator.clipboard?.writeText(msg).then(()=>{
-                                        alert('Access request copied to clipboard. Send it to your admin.');
-                                    }).catch(()=>alert(msg));
-                                },
-                                className: "px-3 py-2 rounded bg-indigo-600 text-white",
-                                children: "Request access (copy)"
-                            }, void 0, false, {
-                                fileName: "[project]/clinic-suite/app/consultation/page.js",
-                                lineNumber: 97,
-                                columnNumber: 13
-                            }, this)
-                        ]
-                    }, void 0, true, {
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                            onClick: ()=>window.location.href = '/',
+                            className: "px-3 py-2 rounded border",
+                            children: "Back to home"
+                        }, void 0, false, {
+                            fileName: "[project]/clinic-suite/app/consultation/page.js",
+                            lineNumber: 96,
+                            columnNumber: 13
+                        }, this)
+                    }, void 0, false, {
                         fileName: "[project]/clinic-suite/app/consultation/page.js",
                         lineNumber: 95,
                         columnNumber: 11
@@ -1878,14 +1861,14 @@ function ConsultationPage() {
                                 children: "doctor"
                             }, void 0, false, {
                                 fileName: "[project]/clinic-suite/app/consultation/page.js",
-                                lineNumber: 107,
+                                lineNumber: 100,
                                 columnNumber: 67
                             }, this),
                             ". Contact your administrator to get access."
                         ]
                     }, void 0, true, {
                         fileName: "[project]/clinic-suite/app/consultation/page.js",
-                        lineNumber: 106,
+                        lineNumber: 99,
                         columnNumber: 11
                     }, this)
                 ]
@@ -1916,12 +1899,12 @@ function ConsultationPage() {
                             onSelectAppointment: (a)=>handleSelectAppointment(a)
                         }, void 0, false, {
                             fileName: "[project]/clinic-suite/app/consultation/page.js",
-                            lineNumber: 119,
+                            lineNumber: 112,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/clinic-suite/app/consultation/page.js",
-                        lineNumber: 118,
+                        lineNumber: 111,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("main", {
@@ -1933,12 +1916,12 @@ function ConsultationPage() {
                             doctorEmail: user?.email
                         }, void 0, false, {
                             fileName: "[project]/clinic-suite/app/consultation/page.js",
-                            lineNumber: 128,
+                            lineNumber: 121,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/clinic-suite/app/consultation/page.js",
-                        lineNumber: 127,
+                        lineNumber: 120,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("aside", {
@@ -1953,7 +1936,7 @@ function ConsultationPage() {
                                         children: "Quick actions"
                                     }, void 0, false, {
                                         fileName: "[project]/clinic-suite/app/consultation/page.js",
-                                        lineNumber: 139,
+                                        lineNumber: 132,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1968,7 +1951,7 @@ function ConsultationPage() {
                                                 children: "Clear selection"
                                             }, void 0, false, {
                                                 fileName: "[project]/clinic-suite/app/consultation/page.js",
-                                                lineNumber: 141,
+                                                lineNumber: 134,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1977,35 +1960,35 @@ function ConsultationPage() {
                                                 children: "Refresh"
                                             }, void 0, false, {
                                                 fileName: "[project]/clinic-suite/app/consultation/page.js",
-                                                lineNumber: 142,
+                                                lineNumber: 135,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/clinic-suite/app/consultation/page.js",
-                                        lineNumber: 140,
+                                        lineNumber: 133,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/clinic-suite/app/consultation/page.js",
-                                lineNumber: 138,
+                                lineNumber: 131,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/clinic-suite/app/consultation/page.js",
-                            lineNumber: 137,
+                            lineNumber: 130,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/clinic-suite/app/consultation/page.js",
-                        lineNumber: 136,
+                        lineNumber: 129,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/clinic-suite/app/consultation/page.js",
-                lineNumber: 117,
+                lineNumber: 110,
                 columnNumber: 7
             }, this),
             error && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2015,18 +1998,18 @@ function ConsultationPage() {
                     children: error
                 }, void 0, false, {
                     fileName: "[project]/clinic-suite/app/consultation/page.js",
-                    lineNumber: 151,
+                    lineNumber: 144,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/clinic-suite/app/consultation/page.js",
-                lineNumber: 150,
+                lineNumber: 143,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/clinic-suite/app/consultation/page.js",
-        lineNumber: 116,
+        lineNumber: 109,
         columnNumber: 5
     }, this);
 }

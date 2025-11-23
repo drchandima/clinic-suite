@@ -93,14 +93,7 @@ export default function ConsultationPage() {
           </div>
 
           <div className="mt-4 flex gap-2">
-            <button onClick={() => window.location.href = '/'} className="px-3 py-2 rounded border">Back to dashboard</button>
-            <button onClick={() => {
-              // helpful copy for the admin
-              const msg = `Please set role='doctor' and clinicId='${claims?.clinicId ?? 'clinic-001'}' for user ${user.email}`;
-              navigator.clipboard?.writeText(msg).then(() => {
-                alert('Access request copied to clipboard. Send it to your admin.');
-              }).catch(()=>alert(msg));
-            }} className="px-3 py-2 rounded bg-indigo-600 text-white">Request access (copy)</button>
+            <button onClick={() => window.location.href = '/'} className="px-3 py-2 rounded border">Back to home</button>
           </div>
 
           <div className="mt-3 text-xs text-slate-400">

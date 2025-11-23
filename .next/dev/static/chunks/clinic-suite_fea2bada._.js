@@ -2095,6 +2095,7 @@ var _s = __turbopack_context__.k.signature();
 ;
 function PatientsPage() {
     _s();
+    // --- Hooks first: ensure stable hook order on every render ---
     const { user, claims, loading } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$components$2f$AuthProvider$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useAuth"])();
     const [patients, setPatients] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])([]);
     const [filtered, setFiltered] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])([]);
@@ -2103,75 +2104,6 @@ function PatientsPage() {
     const [appointments, setAppointments] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])([]);
     const [busy, setBusy] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     const [error, setError] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(null);
-    // --- AUTH GUARD UI (loading / sign-in) ---
-    if (loading) {
-        return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "min-h-[calc(100vh-56px)] flex items-center justify-center",
-            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "text-sm text-slate-500",
-                children: "Loading authentication..."
-            }, void 0, false, {
-                fileName: "[project]/clinic-suite/app/patients/page.js",
-                lineNumber: 32,
-                columnNumber: 9
-            }, this)
-        }, void 0, false, {
-            fileName: "[project]/clinic-suite/app/patients/page.js",
-            lineNumber: 31,
-            columnNumber: 7
-        }, this);
-    }
-    if (!user) {
-        return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "min-h-[calc(100vh-56px)] flex items-center justify-center",
-            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "max-w-lg p-6 bg-white rounded-lg shadow",
-                children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                        className: "text-lg font-semibold",
-                        children: "Sign in required"
-                    }, void 0, false, {
-                        fileName: "[project]/clinic-suite/app/patients/page.js",
-                        lineNumber: 41,
-                        columnNumber: 11
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                        className: "mt-2 text-sm text-slate-600",
-                        children: "You must be signed in to access the Patients area."
-                    }, void 0, false, {
-                        fileName: "[project]/clinic-suite/app/patients/page.js",
-                        lineNumber: 42,
-                        columnNumber: 11
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "mt-4 text-right",
-                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                            href: "/login",
-                            className: "px-3 py-2 bg-indigo-600 text-white rounded",
-                            children: "Go to login"
-                        }, void 0, false, {
-                            fileName: "[project]/clinic-suite/app/patients/page.js",
-                            lineNumber: 44,
-                            columnNumber: 13
-                        }, this)
-                    }, void 0, false, {
-                        fileName: "[project]/clinic-suite/app/patients/page.js",
-                        lineNumber: 43,
-                        columnNumber: 11
-                    }, this)
-                ]
-            }, void 0, true, {
-                fileName: "[project]/clinic-suite/app/patients/page.js",
-                lineNumber: 40,
-                columnNumber: 9
-            }, this)
-        }, void 0, false, {
-            fileName: "[project]/clinic-suite/app/patients/page.js",
-            lineNumber: 39,
-            columnNumber: 7
-        }, this);
-    }
-    // ------------------------------------------------
     // Subscribe patient list
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "PatientsPage.useEffect": ()=>{
@@ -2227,6 +2159,183 @@ function PatientsPage() {
         selectedPatient,
         claims
     ]);
+    // --- Auth guard UI (after hooks) ---
+    if (loading) {
+        return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: "min-h-[calc(100vh-56px)] flex items-center justify-center",
+            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "text-sm text-slate-500",
+                children: "Loading authentication..."
+            }, void 0, false, {
+                fileName: "[project]/clinic-suite/app/patients/page.js",
+                lineNumber: 63,
+                columnNumber: 9
+            }, this)
+        }, void 0, false, {
+            fileName: "[project]/clinic-suite/app/patients/page.js",
+            lineNumber: 62,
+            columnNumber: 7
+        }, this);
+    }
+    if (!user) {
+        return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: "min-h-[calc(100vh-56px)] flex items-center justify-center",
+            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "max-w-lg p-6 bg-white rounded-lg shadow",
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                        className: "text-lg font-semibold",
+                        children: "Sign in required"
+                    }, void 0, false, {
+                        fileName: "[project]/clinic-suite/app/patients/page.js",
+                        lineNumber: 72,
+                        columnNumber: 11
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                        className: "mt-2 text-sm text-slate-600",
+                        children: "You must be signed in to access the Patients area."
+                    }, void 0, false, {
+                        fileName: "[project]/clinic-suite/app/patients/page.js",
+                        lineNumber: 73,
+                        columnNumber: 11
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "mt-4 text-right",
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                            href: "/login",
+                            className: "px-3 py-2 bg-indigo-600 text-white rounded",
+                            children: "Go to login"
+                        }, void 0, false, {
+                            fileName: "[project]/clinic-suite/app/patients/page.js",
+                            lineNumber: 75,
+                            columnNumber: 13
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "[project]/clinic-suite/app/patients/page.js",
+                        lineNumber: 74,
+                        columnNumber: 11
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "[project]/clinic-suite/app/patients/page.js",
+                lineNumber: 71,
+                columnNumber: 9
+            }, this)
+        }, void 0, false, {
+            fileName: "[project]/clinic-suite/app/patients/page.js",
+            lineNumber: 70,
+            columnNumber: 7
+        }, this);
+    }
+    // If receptionist (or any other role) is not allowed, show the styled Access Denied card
+    // In your original setup receptionists can access Patients; if you want to permit different roles adjust the allowedRoles array.
+    const allowedRoles = [
+        'admin',
+        'doctor',
+        'receptionist'
+    ]; // adjust if needed
+    if (!claims?.clinicId || !allowedRoles.includes(claims.role)) {
+        return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: "min-h-[calc(100vh-56px)] flex items-center justify-center bg-slate-50",
+            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "max-w-xl w-full p-6 bg-white rounded-lg shadow",
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                        className: "text-xl font-semibold text-slate-800",
+                        children: "Access denied"
+                    }, void 0, false, {
+                        fileName: "[project]/clinic-suite/app/patients/page.js",
+                        lineNumber: 89,
+                        columnNumber: 11
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                        className: "mt-2 text-sm text-slate-600",
+                        children: "Your account does not have permission to access the Patients area."
+                    }, void 0, false, {
+                        fileName: "[project]/clinic-suite/app/patients/page.js",
+                        lineNumber: 90,
+                        columnNumber: 11
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "mt-4 text-sm text-slate-600",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
+                                        children: "Role:"
+                                    }, void 0, false, {
+                                        fileName: "[project]/clinic-suite/app/patients/page.js",
+                                        lineNumber: 93,
+                                        columnNumber: 16
+                                    }, this),
+                                    " ",
+                                    claims?.role ?? '—'
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/clinic-suite/app/patients/page.js",
+                                lineNumber: 93,
+                                columnNumber: 13
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
+                                        children: "Clinic:"
+                                    }, void 0, false, {
+                                        fileName: "[project]/clinic-suite/app/patients/page.js",
+                                        lineNumber: 94,
+                                        columnNumber: 16
+                                    }, this),
+                                    " ",
+                                    claims?.clinicId ?? '—'
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/clinic-suite/app/patients/page.js",
+                                lineNumber: 94,
+                                columnNumber: 13
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/clinic-suite/app/patients/page.js",
+                        lineNumber: 92,
+                        columnNumber: 11
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "mt-4 flex gap-2",
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                            onClick: ()=>window.location.href = '/',
+                            className: "px-3 py-2 rounded border",
+                            children: "Back to home"
+                        }, void 0, false, {
+                            fileName: "[project]/clinic-suite/app/patients/page.js",
+                            lineNumber: 98,
+                            columnNumber: 13
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "[project]/clinic-suite/app/patients/page.js",
+                        lineNumber: 97,
+                        columnNumber: 11
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "mt-3 text-xs text-slate-400",
+                        children: "Note: Patients pages are restricted. Contact your administrator to get access."
+                    }, void 0, false, {
+                        fileName: "[project]/clinic-suite/app/patients/page.js",
+                        lineNumber: 101,
+                        columnNumber: 11
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "[project]/clinic-suite/app/patients/page.js",
+                lineNumber: 88,
+                columnNumber: 9
+            }, this)
+        }, void 0, false, {
+            fileName: "[project]/clinic-suite/app/patients/page.js",
+            lineNumber: 87,
+            columnNumber: 7
+        }, this);
+    }
+    // --- Functions for patient operations ---
     // Open create in center panel
     function handleOpenCreate() {
         const blank = {
@@ -2316,6 +2425,7 @@ function PatientsPage() {
             setBusy(false);
         }
     }
+    // --- Render main UI ---
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "min-h-[calc(100vh-56px)] bg-slate-50",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2333,12 +2443,12 @@ function PatientsPage() {
                         disabled: busy
                     }, void 0, false, {
                         fileName: "[project]/clinic-suite/app/patients/page.js",
-                        lineNumber: 170,
+                        lineNumber: 201,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/clinic-suite/app/patients/page.js",
-                    lineNumber: 169,
+                    lineNumber: 200,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("main", {
@@ -2351,7 +2461,7 @@ function PatientsPage() {
                                 children: "Select a patient"
                             }, void 0, false, {
                                 fileName: "[project]/clinic-suite/app/patients/page.js",
-                                lineNumber: 185,
+                                lineNumber: 216,
                                 columnNumber: 15
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2359,13 +2469,13 @@ function PatientsPage() {
                                 children: "Search or create a patient on the left. Click a patient to view details."
                             }, void 0, false, {
                                 fileName: "[project]/clinic-suite/app/patients/page.js",
-                                lineNumber: 186,
+                                lineNumber: 217,
                                 columnNumber: 15
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/clinic-suite/app/patients/page.js",
-                        lineNumber: 184,
+                        lineNumber: 215,
                         columnNumber: 13
                     }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$components$2f$PatientDetailCard$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                         patient: selectedPatient,
@@ -2379,12 +2489,12 @@ function PatientsPage() {
                         onCloseCreate: ()=>setSelectedPatient(null)
                     }, void 0, false, {
                         fileName: "[project]/clinic-suite/app/patients/page.js",
-                        lineNumber: 189,
+                        lineNumber: 220,
                         columnNumber: 13
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/clinic-suite/app/patients/page.js",
-                    lineNumber: 182,
+                    lineNumber: 213,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("aside", {
@@ -2399,7 +2509,7 @@ function PatientsPage() {
                                     children: "Quick actions"
                                 }, void 0, false, {
                                     fileName: "[project]/clinic-suite/app/patients/page.js",
-                                    lineNumber: 207,
+                                    lineNumber: 238,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2414,7 +2524,7 @@ function PatientsPage() {
                                             children: "Clear selection"
                                         }, void 0, false, {
                                             fileName: "[project]/clinic-suite/app/patients/page.js",
-                                            lineNumber: 209,
+                                            lineNumber: 240,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -2423,40 +2533,40 @@ function PatientsPage() {
                                             children: "Refresh"
                                         }, void 0, false, {
                                             fileName: "[project]/clinic-suite/app/patients/page.js",
-                                            lineNumber: 210,
+                                            lineNumber: 241,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/clinic-suite/app/patients/page.js",
-                                    lineNumber: 208,
+                                    lineNumber: 239,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/clinic-suite/app/patients/page.js",
-                            lineNumber: 206,
+                            lineNumber: 237,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/clinic-suite/app/patients/page.js",
-                        lineNumber: 205,
+                        lineNumber: 236,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/clinic-suite/app/patients/page.js",
-                    lineNumber: 204,
+                    lineNumber: 235,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/clinic-suite/app/patients/page.js",
-            lineNumber: 167,
+            lineNumber: 198,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/clinic-suite/app/patients/page.js",
-        lineNumber: 166,
+        lineNumber: 197,
         columnNumber: 5
     }, this);
 }

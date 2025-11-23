@@ -63,12 +63,27 @@ export default function PharmacyPage() {
     );
   }
 
-  // Allow pharmacist, admin **and doctor** to access pharmacy.
-  // This gives doctors permission to visit pharmacy pages without being blocked.
+  // Allow pharmacist, admin and doctor to access pharmacy.
   if (!clinicId || !['pharmacist', 'admin', 'doctor'].includes(claims.role)) {
     return (
-      <div className="p-10">
-        Access denied — pharmacist (or admin) role required.
+      <div className="min-h-[calc(100vh-56px)] flex items-center justify-center bg-slate-50">
+        <div className="max-w-xl w-full p-6 bg-white rounded-lg shadow">
+          <h2 className="text-xl font-semibold text-slate-800">Access denied</h2>
+          <p className="mt-2 text-sm text-slate-600">Your account does not have permission to access the Pharmacy area.</p>
+
+          <div className="mt-4 text-sm text-slate-600">
+            <p><strong>Role:</strong> {claims?.role ?? '—'}</p>
+            <p><strong>Clinic:</strong> {claims?.clinicId ?? '—'}</p>
+          </div>
+
+          <div className="mt-4 flex gap-2">
+            <button onClick={() => window.location.href = '/'} className="px-3 py-2 rounded border">Back to home</button>
+          </div>
+
+          <div className="mt-3 text-xs text-slate-400">
+            Note: Pharmacy pages are restricted to users with role <code>pharmacist</code> or <code>admin</code>. Contact your administrator to get access.
+          </div>
+        </div>
       </div>
     );
   }
