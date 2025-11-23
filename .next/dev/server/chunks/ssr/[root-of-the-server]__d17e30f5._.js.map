@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 14, "column": 0}, "map": {"version":3,"sources":["file:///D:/Education/WebDev%20with%20AI/Projects/clinic-suite/app/page.js"],"sourcesContent":["export default function HomePage(){\n  return (\n    <div>\n      <h1 className=\"text-2xl font-bold\">Clinic Suite Starter</h1>\n      <p className=\"mt-4\">This is a starter scaffold. Expand UI and flows per your needs.</p>\n    </div>\n  )\n}\n"],"names":[],"mappings":";;;;;;AAAe,SAAS;IACtB,qBACE,iQAAC;;0BACC,iQAAC;gBAAG,WAAU;0BAAqB;;;;;;0BACnC,iQAAC;gBAAE,WAAU;0BAAO;;;;;;;;;;;;AAG1B"}}]
+}

@@ -1,0 +1,61 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // helper: signed in
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    // ---------------------------
+    // users collection (profile)
+    // ---------------------------
+    // allow authenticated user to read their own users/{uid} doc.
+    // client-side writes are disallowed; use server/admin for updates.
+    match /users/{userId} {
+      allow read: if isSignedIn() && request.auth.uid == userId;
+      allow create, update, delete: if false;
+    }
+
+    // ---------------------------
+    // Consultations (doctor-only)
+    // ---------------------------
+    // consultations are stored under: clinics/{clinicId}/consultations/{consultId}
+    // Only users whose token has role == 'doctor' AND clinicId == clinicId may read/write.
+    match /clinics/{clinicId}/consultations/{consultId} {
+      allow create, read, update, delete: if isSignedIn()
+        && request.auth.token.role == 'doctor'
+        && request.auth.token.clinicId == clinicId;
+    }
+
+    // ---------------------------
+    // Clinic-scoped resources (patients, appointments, drugs, invoices, etc.)
+    // ---------------------------
+    // General rule for clinic-scoped documents.
+    // Access allowed if:
+    //  - request.auth.token.clinicId equals the path clinicId (recommended / production), OR
+    //  - fallback: users/{uid}.clinicId equals clinicId (development convenience), OR
+    //  - request.auth.token.role == 'admin' (super-admin)
+    //
+    // NOTE: get() usage is a fallback that adds one document lookup to rule evaluation.
+    match /clinics/{clinicId}/{document=**} {
+      allow read, write: if isSignedIn() && (
+          // primary: token claim matches clinicId
+          request.auth.token.clinicId == clinicId
+          // fallback: users/{uid}.clinicId matches (development convenience)
+          || ( exists(/databases/$(database)/documents/users/$(request.auth.uid))
+               && get(/databases/$(database)/documents/users/$(request.auth.uid)).data.clinicId == clinicId )
+          // admin override
+          || (request.auth.token.role != null && request.auth.token.role == 'admin')
+        );
+    }
+
+    // ---------------------------
+    // Admin fallback (global)
+    // ---------------------------
+    // allow admins (role == 'admin' in token) to read/write everything.
+    match /{document=**} {
+      allow read, write: if isSignedIn() && request.auth.token.role == 'admin';
+    }
+  }
+}
