@@ -40,6 +40,8 @@ function LoginPage() {
                 router.replace('/consultation');
             } else if (claims.role === 'receptionist') {
                 router.replace('/patients');
+            } else if (claims.role === 'pharmacist') {
+                router.replace('/pharmacy');
             } else {
                 router.replace('/'); // default/fallback
             }
@@ -71,7 +73,7 @@ function LoginPage() {
                     children: "Login"
                 }, void 0, false, {
                     fileName: "[project]/clinic-suite/app/login/page.js",
-                    lineNumber: 48,
+                    lineNumber: 50,
                     columnNumber: 9
                 }, this),
                 error && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -79,7 +81,7 @@ function LoginPage() {
                     children: error
                 }, void 0, false, {
                     fileName: "[project]/clinic-suite/app/login/page.js",
-                    lineNumber: 51,
+                    lineNumber: 53,
                     columnNumber: 11
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
@@ -95,7 +97,7 @@ function LoginPage() {
                             required: true
                         }, void 0, false, {
                             fileName: "[project]/clinic-suite/app/login/page.js",
-                            lineNumber: 57,
+                            lineNumber: 59,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -107,7 +109,7 @@ function LoginPage() {
                             required: true
                         }, void 0, false, {
                             fileName: "[project]/clinic-suite/app/login/page.js",
-                            lineNumber: 66,
+                            lineNumber: 68,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -116,13 +118,13 @@ function LoginPage() {
                             children: "Sign in"
                         }, void 0, false, {
                             fileName: "[project]/clinic-suite/app/login/page.js",
-                            lineNumber: 75,
+                            lineNumber: 77,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/clinic-suite/app/login/page.js",
-                    lineNumber: 56,
+                    lineNumber: 58,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -136,24 +138,24 @@ function LoginPage() {
                             children: "Sign up"
                         }, void 0, false, {
                             fileName: "[project]/clinic-suite/app/login/page.js",
-                            lineNumber: 85,
+                            lineNumber: 87,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/clinic-suite/app/login/page.js",
-                    lineNumber: 83,
+                    lineNumber: 85,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/clinic-suite/app/login/page.js",
-            lineNumber: 47,
+            lineNumber: 49,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/clinic-suite/app/login/page.js",
-        lineNumber: 46,
+        lineNumber: 48,
         columnNumber: 5
     }, this);
 }

@@ -9,6 +9,7 @@ import PharmacyQuickActions from '../../components/PharmacyQuickActions';
 import { subscribePendingPrescriptions, subscribeDrugs } from '../../lib/firestoreClient';
 
 export default function PharmacyPage() {
+  // --- hooks first ---
   const { user, claims, loading } = useAuth();
   const [prescriptions, setPrescriptions] = useState([]);
   const [drugs, setDrugs] = useState([]);
@@ -39,11 +40,37 @@ export default function PharmacyPage() {
     };
   }, [loading, clinicId]);
 
-  // AUTH GUARD
-  if (loading) return <div className="p-10">Loading...</div>;
-  if (!user) return <div className="p-10">Sign in required</div>;
-  if (!claims?.clinicId || !['pharmacist', 'admin'].includes(claims.role)) {
-    return <div className="p-10">Access denied — pharmacist role required.</div>;
+  // AUTH GUARD (after hooks)
+  if (loading) {
+    return (
+      <div className="min-h-[calc(100vh-56px)] flex items-center justify-center">
+        <div className="text-sm text-slate-500">Loading authentication...</div>
+      </div>
+    );
+  }
+
+  if (!user) {
+    return (
+      <div className="min-h-[calc(100vh-56px)] flex items-center justify-center">
+        <div className="max-w-lg p-6 bg-white rounded-lg shadow">
+          <h2 className="text-lg font-semibold">Sign in required</h2>
+          <p className="mt-2 text-sm text-slate-600">You must be signed in to access the Pharmacy area.</p>
+          <div className="mt-4 text-right">
+            <a href="/login" className="px-3 py-2 bg-indigo-600 text-white rounded">Go to login</a>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  // Allow pharmacist, admin **and doctor** to access pharmacy.
+  // This gives doctors permission to visit pharmacy pages without being blocked.
+  if (!clinicId || !['pharmacist', 'admin', 'doctor'].includes(claims.role)) {
+    return (
+      <div className="p-10">
+        Access denied — pharmacist (or admin) role required.
+      </div>
+    );
   }
 
   return (
@@ -63,7 +90,7 @@ export default function PharmacyPage() {
             clinicId={clinicId}
             drugs={drugs}
             prescription={selectedPrescription}
-            pharmacistEmail={user.email}
+            pharmacistEmail={user?.email}
           />
         </main>
 

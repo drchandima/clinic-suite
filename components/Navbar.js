@@ -3,23 +3,14 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname, useRouter } from 'next/navigation';
 import { useAuth } from './AuthProvider';
 import { signOut } from 'firebase/auth';
 import { auth } from '../lib/firebase';
 
 /**
- * Role-aware Navbar
- * Hides pages based on claims.role
- *
- * Roles mapping (customize as needed):
- *  - admin       => sees everything
- *  - doctor      => sees: Consultation + Patients (added)
- *  - receptionist=> sees: Patients
- *  - pharmacist  => sees: Pharmacy / Drugs
- *  - billing     => sees: Billing / Invoices
- *
- * Add/remove links in `linksForRole` below as your app expands.
+ * Role-aware Navbar (no nested Links)
  */
 export default function NavBar() {
   const { user, claims, loading } = useAuth();
@@ -27,12 +18,9 @@ export default function NavBar() {
   const router = useRouter();
   const [open, setOpen] = useState(false);
 
-  // Controlled links by role
+  // base + per-role links
   const linksForRole = (role) => {
-    // default minimal links accessible by anyone signed in
-    const base = [
-      { href: '/', label: 'Home', show: true },
-    ];
+    const base = [{ href: '/', label: 'Home' }];
 
     const roleLinks = {
       admin: [
@@ -42,20 +30,14 @@ export default function NavBar() {
         { href: '/billing', label: 'Billing' },
         { href: '/admin', label: 'Admin' },
       ],
-      // doctors now also see Patients in addition to Consultation
       doctor: [
         { href: '/patients', label: 'Patients' },
         { href: '/consultation', label: 'Consultation' },
+        { href: '/pharmacy', label: 'Pharmacy' }, // doctors see pharmacy too
       ],
-      receptionist: [
-        { href: '/patients', label: 'Patients' },
-      ],
-      pharmacist: [
-        { href: '/pharmacy', label: 'Pharmacy' },
-      ],
-      billing: [
-        { href: '/billing', label: 'Billing' },
-      ]
+      receptionist: [{ href: '/patients', label: 'Patients' }],
+      pharmacist: [{ href: '/pharmacy', label: 'Pharmacy' }],
+      billing: [{ href: '/billing', label: 'Billing' }],
     };
 
     return base.concat(roleLinks[role] || []);
@@ -71,16 +53,11 @@ export default function NavBar() {
     }
   }
 
-  // compute links once we have a role (or fallback to base links)
   const role = claims?.role ?? null;
   const links = role ? linksForRole(role) : linksForRole(null);
 
-  // Simple keyboard-friendly close on route change
-  useEffect(() => {
-    setOpen(false);
-  }, [pathname]);
+  useEffect(() => setOpen(false), [pathname]);
 
-  // formatted role string shown below email (small lowercase)
   const displayedRole = role ? String(role).toLowerCase() : null;
 
   return (
@@ -88,13 +65,16 @@ export default function NavBar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-14 items-center">
           <div className="flex items-center gap-4">
-            <Link href="/" className="flex items-center gap-3">
-              <div className="w-8 h-8 rounded-md bg-indigo-600 flex items-center justify-center text-white font-bold">CS</div>
-              <div className="hidden sm:block">
-                <div className="text-sm font-semibold text-slate-800">Clinic Suite</div>
-                <div className="text-xs text-slate-400">EMR & Clinic Management</div>
-              </div>
+            {/* Logo link: only wraps the logo (no other links inside) */}
+            <Link href="/" className="flex items-center gap-3" aria-label="Clinic Suite home">
+              <Image src="/logo.png" alt="Clinic Suite Logo" width={32} height={32} className="rounded-md" priority />
             </Link>
+
+            {/* site title (not a link; keep separate) */}
+            <div className="hidden sm:block">
+              <div className="text-sm font-semibold text-slate-800">Clinic Suite</div>
+              <div className="text-xs text-slate-400">EMR & Clinic Management</div>
+            </div>
           </div>
 
           {/* Desktop links */}
@@ -108,14 +88,13 @@ export default function NavBar() {
                     {link.label}
                   </NavLink>
                 ))}
+
                 <div className="border-l border-slate-100 pl-3 ml-3">
                   {user ? (
                     <div className="flex items-center gap-3">
                       <div className="flex flex-col">
                         <div className="text-sm text-slate-700">{user.email}</div>
-                        {displayedRole && (
-                          <div className="text-xs text-slate-400 lowercase">{displayedRole}</div>
-                        )}
+                        {displayedRole && <div className="text-xs text-slate-400 lowercase">{displayedRole}</div>}
                       </div>
                       <button onClick={handleSignOut} className="text-sm px-3 py-1 rounded-md border">Sign out</button>
                     </div>
@@ -142,7 +121,7 @@ export default function NavBar() {
         </div>
       </div>
 
-      {/* Mobile drawer */}
+      {/* Mobile drawer (renders links individually; no nested anchors) */}
       {open && (
         <div className="md:hidden bg-white border-t border-slate-100">
           <div className="px-4 py-3 space-y-2">
@@ -163,9 +142,7 @@ export default function NavBar() {
                     <div className="flex items-center justify-between">
                       <div className="flex flex-col">
                         <div className="text-sm text-slate-700">{user.email}</div>
-                        {displayedRole && (
-                          <div className="text-xs text-slate-400 lowercase">{displayedRole}</div>
-                        )}
+                        {displayedRole && <div className="text-xs text-slate-400 lowercase">{displayedRole}</div>}
                       </div>
                       <button onClick={handleSignOut} className="text-sm px-3 py-1 rounded-md border">Sign out</button>
                     </div>
@@ -182,7 +159,6 @@ export default function NavBar() {
   );
 }
 
-/* Small NavLink subcomponent */
 function NavLink({ href, children, active }) {
   return (
     <Link href={href} className={`px-3 py-2 rounded-md text-sm ${active ? 'bg-slate-100 font-medium' : 'text-slate-700 hover:bg-slate-50'}`}>

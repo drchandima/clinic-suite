@@ -1649,6 +1649,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$lib$2f$fi
 ;
 ;
 function PharmacyPage() {
+    // --- hooks first ---
     const { user, claims, loading } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$components$2f$AuthProvider$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useAuth"])();
     const [prescriptions, setPrescriptions] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])([]);
     const [drugs, setDrugs] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])([]);
@@ -1672,34 +1673,88 @@ function PharmacyPage() {
         loading,
         clinicId
     ]);
-    // AUTH GUARD
-    if (loading) return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "p-10",
-        children: "Loading..."
-    }, void 0, false, {
-        fileName: "[project]/clinic-suite/app/pharmacy/page.js",
-        lineNumber: 43,
-        columnNumber: 23
-    }, this);
-    if (!user) return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "p-10",
-        children: "Sign in required"
-    }, void 0, false, {
-        fileName: "[project]/clinic-suite/app/pharmacy/page.js",
-        lineNumber: 44,
-        columnNumber: 21
-    }, this);
-    if (!claims?.clinicId || ![
-        'pharmacist',
-        'admin'
-    ].includes(claims.role)) {
+    // AUTH GUARD (after hooks)
+    if (loading) {
         return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "p-10",
-            children: "Access denied — pharmacist role required."
+            className: "min-h-[calc(100vh-56px)] flex items-center justify-center",
+            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "text-sm text-slate-500",
+                children: "Loading authentication..."
+            }, void 0, false, {
+                fileName: "[project]/clinic-suite/app/pharmacy/page.js",
+                lineNumber: 47,
+                columnNumber: 9
+            }, this)
         }, void 0, false, {
             fileName: "[project]/clinic-suite/app/pharmacy/page.js",
             lineNumber: 46,
-            columnNumber: 12
+            columnNumber: 7
+        }, this);
+    }
+    if (!user) {
+        return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: "min-h-[calc(100vh-56px)] flex items-center justify-center",
+            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "max-w-lg p-6 bg-white rounded-lg shadow",
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                        className: "text-lg font-semibold",
+                        children: "Sign in required"
+                    }, void 0, false, {
+                        fileName: "[project]/clinic-suite/app/pharmacy/page.js",
+                        lineNumber: 56,
+                        columnNumber: 11
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                        className: "mt-2 text-sm text-slate-600",
+                        children: "You must be signed in to access the Pharmacy area."
+                    }, void 0, false, {
+                        fileName: "[project]/clinic-suite/app/pharmacy/page.js",
+                        lineNumber: 57,
+                        columnNumber: 11
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "mt-4 text-right",
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                            href: "/login",
+                            className: "px-3 py-2 bg-indigo-600 text-white rounded",
+                            children: "Go to login"
+                        }, void 0, false, {
+                            fileName: "[project]/clinic-suite/app/pharmacy/page.js",
+                            lineNumber: 59,
+                            columnNumber: 13
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "[project]/clinic-suite/app/pharmacy/page.js",
+                        lineNumber: 58,
+                        columnNumber: 11
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "[project]/clinic-suite/app/pharmacy/page.js",
+                lineNumber: 55,
+                columnNumber: 9
+            }, this)
+        }, void 0, false, {
+            fileName: "[project]/clinic-suite/app/pharmacy/page.js",
+            lineNumber: 54,
+            columnNumber: 7
+        }, this);
+    }
+    // Allow pharmacist, admin **and doctor** to access pharmacy.
+    // This gives doctors permission to visit pharmacy pages without being blocked.
+    if (!clinicId || ![
+        'pharmacist',
+        'admin',
+        'doctor'
+    ].includes(claims.role)) {
+        return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: "p-10",
+            children: "Access denied — pharmacist (or admin) role required."
+        }, void 0, false, {
+            fileName: "[project]/clinic-suite/app/pharmacy/page.js",
+            lineNumber: 70,
+            columnNumber: 7
         }, this);
     }
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1717,12 +1772,12 @@ function PharmacyPage() {
                             selectedPrescription: selectedPrescription
                         }, void 0, false, {
                             fileName: "[project]/clinic-suite/app/pharmacy/page.js",
-                            lineNumber: 53,
+                            lineNumber: 80,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/clinic-suite/app/pharmacy/page.js",
-                        lineNumber: 52,
+                        lineNumber: 79,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("main", {
@@ -1731,15 +1786,15 @@ function PharmacyPage() {
                             clinicId: clinicId,
                             drugs: drugs,
                             prescription: selectedPrescription,
-                            pharmacistEmail: user.email
+                            pharmacistEmail: user?.email
                         }, void 0, false, {
                             fileName: "[project]/clinic-suite/app/pharmacy/page.js",
-                            lineNumber: 62,
+                            lineNumber: 89,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/clinic-suite/app/pharmacy/page.js",
-                        lineNumber: 61,
+                        lineNumber: 88,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("aside", {
@@ -1750,23 +1805,23 @@ function PharmacyPage() {
                                 clinicId: clinicId
                             }, void 0, false, {
                                 fileName: "[project]/clinic-suite/app/pharmacy/page.js",
-                                lineNumber: 72,
+                                lineNumber: 99,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/clinic-suite/app/pharmacy/page.js",
-                            lineNumber: 71,
+                            lineNumber: 98,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/clinic-suite/app/pharmacy/page.js",
-                        lineNumber: 70,
+                        lineNumber: 97,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/clinic-suite/app/pharmacy/page.js",
-                lineNumber: 51,
+                lineNumber: 78,
                 columnNumber: 7
             }, this),
             error && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1776,18 +1831,18 @@ function PharmacyPage() {
                     children: error
                 }, void 0, false, {
                     fileName: "[project]/clinic-suite/app/pharmacy/page.js",
-                    lineNumber: 79,
+                    lineNumber: 106,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/clinic-suite/app/pharmacy/page.js",
-                lineNumber: 78,
+                lineNumber: 105,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/clinic-suite/app/pharmacy/page.js",
-        lineNumber: 50,
+        lineNumber: 77,
         columnNumber: 5
     }, this);
 }

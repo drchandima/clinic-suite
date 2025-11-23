@@ -25,6 +25,30 @@ export default function PatientsPage() {
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState(null);
 
+  // --- AUTH GUARD UI (loading / sign-in) ---
+  if (loading) {
+    return (
+      <div className="min-h-[calc(100vh-56px)] flex items-center justify-center">
+        <div className="text-sm text-slate-500">Loading authentication...</div>
+      </div>
+    );
+  }
+
+  if (!user) {
+    return (
+      <div className="min-h-[calc(100vh-56px)] flex items-center justify-center">
+        <div className="max-w-lg p-6 bg-white rounded-lg shadow">
+          <h2 className="text-lg font-semibold">Sign in required</h2>
+          <p className="mt-2 text-sm text-slate-600">You must be signed in to access the Patients area.</p>
+          <div className="mt-4 text-right">
+            <a href="/login" className="px-3 py-2 bg-indigo-600 text-white rounded">Go to login</a>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  // ------------------------------------------------
+
   // Subscribe patient list
   useEffect(() => {
     if (loading) return;

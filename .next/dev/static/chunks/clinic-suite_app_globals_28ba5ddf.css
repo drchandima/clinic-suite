@@ -2,6 +2,9 @@
 @layer properties {
   @supports (((-webkit-hyphens: none)) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color: rgb(from red r g b)))) {
     *, :before, :after, ::backdrop {
+      --tw-translate-x: 0;
+      --tw-translate-y: 0;
+      --tw-translate-z: 0;
       --tw-divide-y-reverse: 0;
       --tw-border-style: solid;
       --tw-shadow: 0 0 #0000;
@@ -23,8 +26,24 @@
   }
 }
 
+.pointer-events-none {
+  pointer-events: none;
+}
+
+.visible {
+  visibility: visible;
+}
+
+.absolute {
+  position: absolute;
+}
+
 .fixed {
   position: fixed;
+}
+
+.relative {
+  position: relative;
 }
 
 .sticky {
@@ -59,6 +78,10 @@
   display: none;
 }
 
+.inline-flex {
+  display: inline-flex;
+}
+
 .table {
   display: table;
 }
@@ -87,12 +110,26 @@
   width: 100%;
 }
 
+.w-max {
+  width: max-content;
+}
+
 .flex-1 {
   flex: 1;
 }
 
 .border-collapse {
   border-collapse: collapse;
+}
+
+.translate-x-1\/4 {
+  --tw-translate-x: calc(1 / 4 * 100%);
+  translate: var(--tw-translate-x) var(--tw-translate-y);
+}
+
+.-translate-y-1\/4 {
+  --tw-translate-y: calc(calc(1 / 4 * 100%) * -1);
+  translate: var(--tw-translate-x) var(--tw-translate-y);
 }
 
 .cursor-not-allowed {
@@ -111,8 +148,16 @@
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .flex-col {
   flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
 }
 
 .items-center {
@@ -147,6 +192,10 @@
   overflow: auto;
 }
 
+.overflow-hidden {
+  overflow: hidden;
+}
+
 .rounded-full {
   border-radius: 3.40282e38px;
 }
@@ -171,6 +220,11 @@
   border-left-width: 1px;
 }
 
+.bg-gradient-to-b {
+  --tw-gradient-position: to bottom in oklab;
+  background-image: linear-gradient(var(--tw-gradient-stops));
+}
+
 .text-center {
   text-align: center;
 }
@@ -189,6 +243,10 @@
 
 .lowercase {
   text-transform: lowercase;
+}
+
+.opacity-20 {
+  opacity: .2;
 }
 
 .opacity-60 {
@@ -345,6 +403,24 @@ td {
   padding: .2rem .5rem;
   font-size: .75rem;
   font-weight: 500;
+}
+
+@property --tw-translate-x {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+
+@property --tw-translate-y {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+
+@property --tw-translate-z {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
 }
 
 @property --tw-divide-y-reverse {

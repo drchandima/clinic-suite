@@ -25,6 +25,8 @@ export default function LoginPage() {
       router.replace('/consultation');
     } else if (claims.role === 'receptionist') {
       router.replace('/patients');
+    } else if (claims.role === 'pharmacist') {
+      router.replace('/pharmacy');
     } else {
       router.replace('/'); // default/fallback
     }
