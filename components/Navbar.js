@@ -73,7 +73,7 @@ export default function NavBar() {
             {/* site title (not a link; keep separate) */}
             <div className="hidden sm:block">
               <div className="text-sm font-semibold text-slate-800">Clinic Suite</div>
-              <div className="text-xs text-slate-400">EMR & Clinic Management</div>
+              <div className="text-xs text-slate-400">Clinic Management & EMR</div>
             </div>
           </div>
 

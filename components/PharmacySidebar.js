@@ -40,7 +40,6 @@ export default function PharmacySidebar({ prescriptions = [], onSelect = () => {
       {/* Selected prescription preview */}
       <div className="rounded-xl bg-white p-4 shadow-sm">
         <div className="text-sm font-medium text-slate-800">Selected prescription</div>
-        <div className="text-xs text-slate-500 mt-1">Doctor's raw management</div>
         <div className="mt-3">
           {selectedPrescription ? (
             <div>

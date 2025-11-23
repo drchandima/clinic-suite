@@ -1,200 +1,4 @@
 module.exports = [
-"[project]/clinic-suite/components/PharmacySidebar.js [app-ssr] (ecmascript)", ((__turbopack_context__) => {
-"use strict";
-
-// components/PharmacySidebar.js
-__turbopack_context__.s([
-    "default",
-    ()=>PharmacySidebar
-]);
-var __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/clinic-suite/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/clinic-suite/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
-'use client';
-;
-;
-function PharmacySidebar({ prescriptions = [], onSelect = ()=>{}, selectedId = null, selectedPrescription = null }) {
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "space-y-4",
-        children: [
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "rounded-xl bg-white p-4 shadow-sm",
-                children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "text-sm font-medium text-slate-800",
-                        children: "Prescriptions"
-                    }, void 0, false, {
-                        fileName: "[project]/clinic-suite/components/PharmacySidebar.js",
-                        lineNumber: 18,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "text-xs text-slate-500 mt-1",
-                        children: "Pending prescriptions from doctors"
-                    }, void 0, false, {
-                        fileName: "[project]/clinic-suite/components/PharmacySidebar.js",
-                        lineNumber: 19,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "mt-3 space-y-2 max-h-[48vh] overflow-auto",
-                        children: [
-                            prescriptions.length === 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "text-sm text-slate-400",
-                                children: "No pending prescriptions"
-                            }, void 0, false, {
-                                fileName: "[project]/clinic-suite/components/PharmacySidebar.js",
-                                lineNumber: 22,
-                                columnNumber: 42
-                            }, this),
-                            prescriptions.map((p)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                    onClick: ()=>onSelect(p),
-                                    className: `w-full text-left p-3 border rounded transition-colors duration-100 ${selectedId === p.id ? 'bg-indigo-50 ring-1 ring-indigo-200' : 'hover:bg-slate-50'}`,
-                                    children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "flex justify-between",
-                                            children: [
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "text-sm font-medium",
-                                                    children: p.patientNic ?? 'Unknown'
-                                                }, void 0, false, {
-                                                    fileName: "[project]/clinic-suite/components/PharmacySidebar.js",
-                                                    lineNumber: 31,
-                                                    columnNumber: 17
-                                                }, this),
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "text-xs text-slate-500",
-                                                    children: p.createdAt ? new Date(p.createdAt).toLocaleString() : ''
-                                                }, void 0, false, {
-                                                    fileName: "[project]/clinic-suite/components/PharmacySidebar.js",
-                                                    lineNumber: 32,
-                                                    columnNumber: 17
-                                                }, this)
-                                            ]
-                                        }, void 0, true, {
-                                            fileName: "[project]/clinic-suite/components/PharmacySidebar.js",
-                                            lineNumber: 30,
-                                            columnNumber: 15
-                                        }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "text-xs text-slate-400 mt-1",
-                                            children: [
-                                                "Doctor: ",
-                                                p.doctorEmail ?? '-'
-                                            ]
-                                        }, void 0, true, {
-                                            fileName: "[project]/clinic-suite/components/PharmacySidebar.js",
-                                            lineNumber: 34,
-                                            columnNumber: 15
-                                        }, this)
-                                    ]
-                                }, p.id, true, {
-                                    fileName: "[project]/clinic-suite/components/PharmacySidebar.js",
-                                    lineNumber: 25,
-                                    columnNumber: 13
-                                }, this))
-                        ]
-                    }, void 0, true, {
-                        fileName: "[project]/clinic-suite/components/PharmacySidebar.js",
-                        lineNumber: 21,
-                        columnNumber: 9
-                    }, this)
-                ]
-            }, void 0, true, {
-                fileName: "[project]/clinic-suite/components/PharmacySidebar.js",
-                lineNumber: 17,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "rounded-xl bg-white p-4 shadow-sm",
-                children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "text-sm font-medium text-slate-800",
-                        children: "Selected prescription"
-                    }, void 0, false, {
-                        fileName: "[project]/clinic-suite/components/PharmacySidebar.js",
-                        lineNumber: 42,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "mt-3",
-                        children: selectedPrescription ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            children: [
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "text-sm",
-                                    children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
-                                            children: "Patient:"
-                                        }, void 0, false, {
-                                            fileName: "[project]/clinic-suite/components/PharmacySidebar.js",
-                                            lineNumber: 46,
-                                            columnNumber: 40
-                                        }, this),
-                                        " ",
-                                        selectedPrescription.patientNic
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "[project]/clinic-suite/components/PharmacySidebar.js",
-                                    lineNumber: 46,
-                                    columnNumber: 15
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "text-sm",
-                                    children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
-                                            children: "Doctor:"
-                                        }, void 0, false, {
-                                            fileName: "[project]/clinic-suite/components/PharmacySidebar.js",
-                                            lineNumber: 47,
-                                            columnNumber: 40
-                                        }, this),
-                                        " ",
-                                        selectedPrescription.doctorEmail
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "[project]/clinic-suite/components/PharmacySidebar.js",
-                                    lineNumber: 47,
-                                    columnNumber: 15
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "mt-2 whitespace-pre-wrap text-sm text-slate-700",
-                                    children: selectedPrescription.rawManagement || '- (no management text) -'
-                                }, void 0, false, {
-                                    fileName: "[project]/clinic-suite/components/PharmacySidebar.js",
-                                    lineNumber: 48,
-                                    columnNumber: 15
-                                }, this)
-                            ]
-                        }, void 0, true, {
-                            fileName: "[project]/clinic-suite/components/PharmacySidebar.js",
-                            lineNumber: 45,
-                            columnNumber: 13
-                        }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "text-sm text-slate-400",
-                            children: "Select a prescription"
-                        }, void 0, false, {
-                            fileName: "[project]/clinic-suite/components/PharmacySidebar.js",
-                            lineNumber: 50,
-                            columnNumber: 15
-                        }, this)
-                    }, void 0, false, {
-                        fileName: "[project]/clinic-suite/components/PharmacySidebar.js",
-                        lineNumber: 43,
-                        columnNumber: 9
-                    }, this)
-                ]
-            }, void 0, true, {
-                fileName: "[project]/clinic-suite/components/PharmacySidebar.js",
-                lineNumber: 41,
-                columnNumber: 7
-            }, this)
-        ]
-    }, void 0, true, {
-        fileName: "[project]/clinic-suite/components/PharmacySidebar.js",
-        lineNumber: 16,
-        columnNumber: 5
-    }, this);
-}
-}),
 "[project]/clinic-suite/utils/idHelpers.js [app-ssr] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
@@ -813,6 +617,332 @@ async function fetchInvoicesForPatient(clinicId, patientNic) {
    Exports (already named exports above)
    ============================ */  // Note: all functions are exported as named exports above.
  // No default export.
+}),
+"[project]/clinic-suite/components/PharmacySidebar.js [app-ssr] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+// components/PharmacySidebar.js
+__turbopack_context__.s([
+    "default",
+    ()=>PharmacySidebar
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/clinic-suite/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/clinic-suite/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$lib$2f$firestoreClient$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/clinic-suite/lib/firestoreClient.js [app-ssr] (ecmascript)");
+'use client';
+;
+;
+;
+function PharmacySidebar({ clinicId, prescriptions = [], onSelect = ()=>{}, selectedId = null, selectedPrescription = null }) {
+    const [patient, setPatient] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(null);
+    const [loadingPatient, setLoadingPatient] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
+    const [patientError, setPatientError] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(null);
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
+        let mounted = true;
+        setPatient(null);
+        setPatientError(null);
+        if (!clinicId || !selectedPrescription?.patientNic) return undefined;
+        setLoadingPatient(true);
+        (async ()=>{
+            try {
+                const nic = String(selectedPrescription.patientNic);
+                const p = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$lib$2f$firestoreClient$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["getPatient"])(clinicId, nic);
+                if (!mounted) return;
+                setPatient(p ?? null);
+            } catch (err) {
+                if (!mounted) return;
+                console.error('getPatient failed', err);
+                setPatientError(err?.message ?? String(err));
+                setPatient(null);
+            } finally{
+                if (!mounted) return;
+                setLoadingPatient(false);
+            }
+        })();
+        return ()=>{
+            mounted = false;
+        };
+    }, [
+        clinicId,
+        selectedPrescription?.patientNic
+    ]);
+    const looksLikeNic = (s)=>typeof s === 'string' && /^\s*\d{4,12}[vVxX]?\s*$/.test(String(s).replace(/\s+/g, ''));
+    const buildPreview = (presc, patientDoc)=>{
+        const preview = {
+            patientName: '—',
+            nic: '—',
+            gender: '—',
+            doctorEmail: '—',
+            rawManagement: ''
+        };
+        if (!presc) return preview;
+        const nicVal = presc.patientNic ?? (patientDoc && patientDoc.nic) ?? '';
+        preview.nic = nicVal || '—';
+        // prefer patient document for name
+        const pFirst = (patientDoc && (patientDoc.firstName ?? patientDoc.givenName)) ?? '';
+        const pLast = (patientDoc && (patientDoc.lastName ?? patientDoc.familyName)) ?? '';
+        // fallback name sources from prescription if patient doc not available
+        const rawNameFromPresc = (presc.patientName ?? presc.patientFullName ?? presc.patient ?? '') || '';
+        let patientName = '';
+        if (pFirst || pLast) patientName = [
+            pFirst,
+            pLast
+        ].filter(Boolean).join(' ');
+        else if (rawNameFromPresc && !looksLikeNic(String(rawNameFromPresc))) patientName = String(rawNameFromPresc).trim();
+        if (!patientName) patientName = preview.nic;
+        preview.patientName = patientName || '—';
+        // gender MUST come from patient document if available
+        const genderFromPatient = patientDoc?.gender ?? patientDoc?.sex ?? null;
+        preview.gender = (genderFromPatient ?? presc.gender ?? presc.patientGender ?? '—') || '—';
+        preview.doctorEmail = presc.doctorEmail ?? '—';
+        // rawManagement: show exactly as stored in the DB (or empty string)
+        preview.rawManagement = presc.rawManagement ?? '';
+        return preview;
+    };
+    const preview = buildPreview(selectedPrescription, patient);
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+        className: "space-y-4",
+        children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "rounded-xl bg-white p-4 shadow-sm",
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "text-sm font-medium text-slate-800",
+                        children: "Prescriptions"
+                    }, void 0, false, {
+                        fileName: "[project]/clinic-suite/components/PharmacySidebar.js",
+                        lineNumber: 99,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "text-xs text-slate-500 mt-1",
+                        children: "Pending prescriptions from doctors"
+                    }, void 0, false, {
+                        fileName: "[project]/clinic-suite/components/PharmacySidebar.js",
+                        lineNumber: 100,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "mt-3 space-y-2 max-h-[48vh] overflow-auto",
+                        children: [
+                            prescriptions.length === 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "text-sm text-slate-400",
+                                children: "No pending prescriptions"
+                            }, void 0, false, {
+                                fileName: "[project]/clinic-suite/components/PharmacySidebar.js",
+                                lineNumber: 103,
+                                columnNumber: 42
+                            }, this),
+                            prescriptions.map((p)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                    onClick: ()=>onSelect(p),
+                                    className: `w-full text-left p-3 border rounded transition-colors duration-100 ${selectedId === p.id ? 'bg-indigo-50 ring-1 ring-indigo-200' : 'hover:bg-slate-50'}`,
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: "flex justify-between",
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                    className: "text-sm font-medium",
+                                                    children: p.patientNic ?? 'Unknown'
+                                                }, void 0, false, {
+                                                    fileName: "[project]/clinic-suite/components/PharmacySidebar.js",
+                                                    lineNumber: 112,
+                                                    columnNumber: 17
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                    className: "text-xs text-slate-500",
+                                                    children: p.createdAt ? new Date(p.createdAt).toLocaleString() : ''
+                                                }, void 0, false, {
+                                                    fileName: "[project]/clinic-suite/components/PharmacySidebar.js",
+                                                    lineNumber: 113,
+                                                    columnNumber: 17
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/clinic-suite/components/PharmacySidebar.js",
+                                            lineNumber: 111,
+                                            columnNumber: 15
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: "text-xs text-slate-400 mt-1",
+                                            children: [
+                                                "Doctor: ",
+                                                p.doctorEmail ?? '-'
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/clinic-suite/components/PharmacySidebar.js",
+                                            lineNumber: 115,
+                                            columnNumber: 15
+                                        }, this)
+                                    ]
+                                }, p.id, true, {
+                                    fileName: "[project]/clinic-suite/components/PharmacySidebar.js",
+                                    lineNumber: 106,
+                                    columnNumber: 13
+                                }, this))
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/clinic-suite/components/PharmacySidebar.js",
+                        lineNumber: 102,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "[project]/clinic-suite/components/PharmacySidebar.js",
+                lineNumber: 98,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "rounded-xl bg-white p-4 shadow-sm",
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "text-sm font-medium text-slate-800",
+                        children: "Selected prescription"
+                    }, void 0, false, {
+                        fileName: "[project]/clinic-suite/components/PharmacySidebar.js",
+                        lineNumber: 123,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "mt-3",
+                        children: selectedPrescription ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "text-sm",
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
+                                            children: "Patient:"
+                                        }, void 0, false, {
+                                            fileName: "[project]/clinic-suite/components/PharmacySidebar.js",
+                                            lineNumber: 127,
+                                            columnNumber: 40
+                                        }, this),
+                                        " ",
+                                        preview.patientName
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/clinic-suite/components/PharmacySidebar.js",
+                                    lineNumber: 127,
+                                    columnNumber: 15
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "text-sm",
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
+                                            children: "NIC:"
+                                        }, void 0, false, {
+                                            fileName: "[project]/clinic-suite/components/PharmacySidebar.js",
+                                            lineNumber: 128,
+                                            columnNumber: 40
+                                        }, this),
+                                        " ",
+                                        preview.nic
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/clinic-suite/components/PharmacySidebar.js",
+                                    lineNumber: 128,
+                                    columnNumber: 15
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "text-sm",
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
+                                            children: "Gender:"
+                                        }, void 0, false, {
+                                            fileName: "[project]/clinic-suite/components/PharmacySidebar.js",
+                                            lineNumber: 129,
+                                            columnNumber: 40
+                                        }, this),
+                                        " ",
+                                        preview.gender
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/clinic-suite/components/PharmacySidebar.js",
+                                    lineNumber: 129,
+                                    columnNumber: 15
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "text-sm",
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
+                                            children: "Doctor:"
+                                        }, void 0, false, {
+                                            fileName: "[project]/clinic-suite/components/PharmacySidebar.js",
+                                            lineNumber: 130,
+                                            columnNumber: 40
+                                        }, this),
+                                        " ",
+                                        preview.doctorEmail
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/clinic-suite/components/PharmacySidebar.js",
+                                    lineNumber: 130,
+                                    columnNumber: 15
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "mt-3 text-sm font-medium",
+                                    children: "Drug list:"
+                                }, void 0, false, {
+                                    fileName: "[project]/clinic-suite/components/PharmacySidebar.js",
+                                    lineNumber: 132,
+                                    columnNumber: 15
+                                }, this),
+                                preview.rawManagement ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "mt-2 whitespace-pre-wrap text-sm text-slate-700",
+                                    children: preview.rawManagement
+                                }, void 0, false, {
+                                    fileName: "[project]/clinic-suite/components/PharmacySidebar.js",
+                                    lineNumber: 134,
+                                    columnNumber: 17
+                                }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "mt-2 text-sm text-slate-400",
+                                    children: "No drugs listed"
+                                }, void 0, false, {
+                                    fileName: "[project]/clinic-suite/components/PharmacySidebar.js",
+                                    lineNumber: 136,
+                                    columnNumber: 17
+                                }, this),
+                                patientError && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "mt-2 text-xs text-red-600",
+                                    children: [
+                                        "Patient lookup failed: ",
+                                        String(patientError)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/clinic-suite/components/PharmacySidebar.js",
+                                    lineNumber: 139,
+                                    columnNumber: 32
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/clinic-suite/components/PharmacySidebar.js",
+                            lineNumber: 126,
+                            columnNumber: 13
+                        }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "text-sm text-slate-400",
+                            children: "Select a prescription"
+                        }, void 0, false, {
+                            fileName: "[project]/clinic-suite/components/PharmacySidebar.js",
+                            lineNumber: 142,
+                            columnNumber: 13
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "[project]/clinic-suite/components/PharmacySidebar.js",
+                        lineNumber: 124,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "[project]/clinic-suite/components/PharmacySidebar.js",
+                lineNumber: 122,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "[project]/clinic-suite/components/PharmacySidebar.js",
+        lineNumber: 97,
+        columnNumber: 5
+    }, this);
+}
 }),
 "[project]/clinic-suite/components/PharmacyCenter.js [app-ssr] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
@@ -1949,4 +2079,4 @@ function PharmacyPage() {
 }),
 ];
 
-//# sourceMappingURL=clinic-suite_70fa117c._.js.map
+//# sourceMappingURL=clinic-suite_6d58591e._.js.map

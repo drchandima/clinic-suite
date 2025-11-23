@@ -12,7 +12,7 @@ import {
 
 export default function ConsultationPage() {
   const { user, claims, loading } = useAuth();
-  const [date, setDate] = useState(() => new Date().toISOString().slice(0,10));
+  const [date, setDate] = useState(() => new Date().toISOString().slice(0, 10));
   const [appointments, setAppointments] = useState([]);
   const [selectedAppointment, setSelectedAppointment] = useState(null);
   const [selectedPatient, setSelectedPatient] = useState(null);
@@ -26,11 +26,18 @@ export default function ConsultationPage() {
     // if user is not a doctor, do not subscribe to any data
     if (!isAuthReady || !isDoctor) return;
     setError(null);
-    const unsub = subscribeAppointmentsByDate(claims.clinicId, new Date(date), (items) => {
-      setAppointments(items);
-    }, (err) => setError(err.message || String(err)));
-    return () => unsub();
-  }, [isAuthReady, isDoctor, claims, date]);
+    const unsub = subscribeAppointmentsByDate(
+      claims.clinicId,
+      new Date(date),
+      (items) => {
+        setAppointments(items);
+      },
+      (err) => setError(err.message || String(err))
+    );
+    return () => {
+      if (typeof unsub === 'function') unsub();
+    };
+  }, [isAuthReady, isDoctor, claims?.clinicId, date]);
 
   // when user selects an appointment, load the patient
   async function handleSelectAppointment(appt) {
@@ -110,10 +117,10 @@ export default function ConsultationPage() {
       <div className="max-w-7xl mx-auto px-4 py-8 grid grid-cols-1 lg:grid-cols-12 gap-6">
         <aside className="lg:col-span-3">
           <ConsultationSidebar
-            date={date}
-            onChangeDate={setDate}
+            clinicId={claims.clinicId}
             appointments={appointments}
-            onSelectAppointment={(a) => handleSelectAppointment(a)}
+            selectedAppointmentId={selectedAppointment?.id}
+            onSelect={handleSelectAppointment}
           />
         </aside>
 

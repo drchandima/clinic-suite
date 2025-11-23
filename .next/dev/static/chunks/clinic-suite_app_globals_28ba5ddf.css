@@ -90,12 +90,12 @@
   max-height: 48vh;
 }
 
-.max-h-\[65vh\] {
-  max-height: 65vh;
+.max-h-\[56vh\] {
+  max-height: 56vh;
 }
 
-.max-h-\[70vh\] {
-  max-height: 70vh;
+.max-h-\[65vh\] {
+  max-height: 65vh;
 }
 
 .min-h-\[calc\(100vh-56px\)\] {
@@ -218,6 +218,10 @@
 .border-l {
   border-left-style: var(--tw-border-style);
   border-left-width: 1px;
+}
+
+.border-transparent {
+  border-color: #0000;
 }
 
 .bg-gradient-to-b {

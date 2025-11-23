@@ -1,156 +1,4 @@
 (globalThis.TURBOPACK || (globalThis.TURBOPACK = [])).push([typeof document === "object" ? document.currentScript : undefined,
-"[project]/clinic-suite/components/ConsultationSidebar.js [app-client] (ecmascript)", ((__turbopack_context__) => {
-"use strict";
-
-// components/ConsultationSidebar.js
-__turbopack_context__.s([
-    "default",
-    ()=>ConsultationSidebar
-]);
-var __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/clinic-suite/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
-'use client';
-;
-function ConsultationSidebar({ date, onChangeDate, appointments = [], onSelectAppointment }) {
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "space-y-4",
-        children: [
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "rounded-xl bg-white p-4 shadow-sm",
-                children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "text-sm font-medium text-slate-800",
-                        children: "Calendar"
-                    }, void 0, false, {
-                        fileName: "[project]/clinic-suite/components/ConsultationSidebar.js",
-                        lineNumber: 8,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "mt-3",
-                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
-                            type: "date",
-                            value: date,
-                            onChange: (e)=>onChangeDate(e.target.value),
-                            className: "w-full p-2 border rounded"
-                        }, void 0, false, {
-                            fileName: "[project]/clinic-suite/components/ConsultationSidebar.js",
-                            lineNumber: 10,
-                            columnNumber: 11
-                        }, this)
-                    }, void 0, false, {
-                        fileName: "[project]/clinic-suite/components/ConsultationSidebar.js",
-                        lineNumber: 9,
-                        columnNumber: 9
-                    }, this)
-                ]
-            }, void 0, true, {
-                fileName: "[project]/clinic-suite/components/ConsultationSidebar.js",
-                lineNumber: 7,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "rounded-xl bg-white p-4 shadow-sm",
-                children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "text-sm font-medium text-slate-800",
-                        children: "Appointments"
-                    }, void 0, false, {
-                        fileName: "[project]/clinic-suite/components/ConsultationSidebar.js",
-                        lineNumber: 20,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "text-xs text-slate-500 mt-1",
-                        children: "Appointments for selected date"
-                    }, void 0, false, {
-                        fileName: "[project]/clinic-suite/components/ConsultationSidebar.js",
-                        lineNumber: 21,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "mt-3 space-y-2 max-h-[70vh] overflow-auto",
-                        children: [
-                            appointments.length === 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "text-sm text-slate-400",
-                                children: "No appointments"
-                            }, void 0, false, {
-                                fileName: "[project]/clinic-suite/components/ConsultationSidebar.js",
-                                lineNumber: 23,
-                                columnNumber: 41
-                            }, this),
-                            appointments.map((a)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    onClick: ()=>onSelectAppointment(a),
-                                    className: "p-3 border rounded cursor-pointer hover:bg-slate-50",
-                                    children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "flex justify-between",
-                                            children: [
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "text-sm font-medium",
-                                                    children: a.patientName ?? a.patientNic
-                                                }, void 0, false, {
-                                                    fileName: "[project]/clinic-suite/components/ConsultationSidebar.js",
-                                                    lineNumber: 31,
-                                                    columnNumber: 17
-                                                }, this),
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "text-xs text-slate-500",
-                                                    children: new Date(a.scheduledAt).toLocaleTimeString()
-                                                }, void 0, false, {
-                                                    fileName: "[project]/clinic-suite/components/ConsultationSidebar.js",
-                                                    lineNumber: 32,
-                                                    columnNumber: 17
-                                                }, this)
-                                            ]
-                                        }, void 0, true, {
-                                            fileName: "[project]/clinic-suite/components/ConsultationSidebar.js",
-                                            lineNumber: 30,
-                                            columnNumber: 15
-                                        }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "text-xs text-slate-400 mt-1",
-                                            children: [
-                                                a.patientNic,
-                                                " • ",
-                                                a.status
-                                            ]
-                                        }, void 0, true, {
-                                            fileName: "[project]/clinic-suite/components/ConsultationSidebar.js",
-                                            lineNumber: 34,
-                                            columnNumber: 15
-                                        }, this)
-                                    ]
-                                }, a.id, true, {
-                                    fileName: "[project]/clinic-suite/components/ConsultationSidebar.js",
-                                    lineNumber: 25,
-                                    columnNumber: 13
-                                }, this))
-                        ]
-                    }, void 0, true, {
-                        fileName: "[project]/clinic-suite/components/ConsultationSidebar.js",
-                        lineNumber: 22,
-                        columnNumber: 9
-                    }, this)
-                ]
-            }, void 0, true, {
-                fileName: "[project]/clinic-suite/components/ConsultationSidebar.js",
-                lineNumber: 19,
-                columnNumber: 7
-            }, this)
-        ]
-    }, void 0, true, {
-        fileName: "[project]/clinic-suite/components/ConsultationSidebar.js",
-        lineNumber: 6,
-        columnNumber: 5
-    }, this);
-}
-_c = ConsultationSidebar;
-var _c;
-__turbopack_context__.k.register(_c, "ConsultationSidebar");
-if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
-    __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
-}
-}),
 "[project]/clinic-suite/utils/idHelpers.js [app-client] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
@@ -776,6 +624,273 @@ if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelper
     __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
 }
 }),
+"[project]/clinic-suite/components/ConsultationSidebar.js [app-client] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+// components/ConsultationSidebar.js
+__turbopack_context__.s([
+    "default",
+    ()=>ConsultationSidebar
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/clinic-suite/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/clinic-suite/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$lib$2f$firestoreClient$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/clinic-suite/lib/firestoreClient.js [app-client] (ecmascript)");
+;
+var _s = __turbopack_context__.k.signature();
+'use client';
+;
+;
+function ConsultationSidebar({ clinicId, date = new Date().toISOString().slice(0, 10), onChangeDate = ()=>{}, appointments = [], selectedAppointmentId = null, onSelect = ()=>{} }) {
+    _s();
+    const [patientMap, setPatientMap] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])({});
+    const [loadingMap, setLoadingMap] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
+    const [error, setError] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(null);
+    // compute unique NICs present in appointments
+    const uniqueNics = (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useMemo"])({
+        "ConsultationSidebar.useMemo[uniqueNics]": ()=>{
+            const s = new Set();
+            for (const a of appointments || []){
+                if (a && a.patientNic) s.add(String(a.patientNic));
+            }
+            return Array.from(s);
+        }
+    }["ConsultationSidebar.useMemo[uniqueNics]"], [
+        appointments
+    ]);
+    // fetch patient docs for those NICs (batch)
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
+        "ConsultationSidebar.useEffect": ()=>{
+            let mounted = true;
+            if (!clinicId || uniqueNics.length === 0) {
+                setPatientMap({});
+                return;
+            }
+            setLoadingMap(true);
+            setError(null);
+            ({
+                "ConsultationSidebar.useEffect": async ()=>{
+                    try {
+                        const map = {};
+                        await Promise.all(uniqueNics.map({
+                            "ConsultationSidebar.useEffect": async (nic)=>{
+                                try {
+                                    const p = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$lib$2f$firestoreClient$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["getPatient"])(clinicId, nic);
+                                    map[nic] = p ?? null;
+                                } catch (err) {
+                                    map[nic] = null;
+                                    console.error('getPatient error', nic, err);
+                                }
+                            }
+                        }["ConsultationSidebar.useEffect"]));
+                        if (!mounted) return;
+                        setPatientMap(map);
+                    } catch (err) {
+                        console.error('fetch patientMap failed', err);
+                        if (mounted) setError(err?.message ?? String(err));
+                    } finally{
+                        if (mounted) setLoadingMap(false);
+                    }
+                }
+            })["ConsultationSidebar.useEffect"]();
+            return ({
+                "ConsultationSidebar.useEffect": ()=>{
+                    mounted = false;
+                }
+            })["ConsultationSidebar.useEffect"];
+        }
+    }["ConsultationSidebar.useEffect"], [
+        clinicId,
+        uniqueNics.join('|')
+    ]);
+    function formatTime(iso) {
+        if (!iso) return '';
+        try {
+            const d = new Date(iso);
+            return d.toLocaleTimeString([], {
+                hour: '2-digit',
+                minute: '2-digit'
+            });
+        } catch  {
+            return iso;
+        }
+    }
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+        className: "space-y-4",
+        children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "rounded-xl bg-white p-4 shadow-sm",
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "text-sm font-medium text-slate-800",
+                        children: "Calendar"
+                    }, void 0, false, {
+                        fileName: "[project]/clinic-suite/components/ConsultationSidebar.js",
+                        lineNumber: 94,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "mt-3",
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                            type: "date",
+                            value: date,
+                            onChange: (e)=>onChangeDate(e.target.value),
+                            className: "w-full p-2 border rounded"
+                        }, void 0, false, {
+                            fileName: "[project]/clinic-suite/components/ConsultationSidebar.js",
+                            lineNumber: 96,
+                            columnNumber: 11
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "[project]/clinic-suite/components/ConsultationSidebar.js",
+                        lineNumber: 95,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "[project]/clinic-suite/components/ConsultationSidebar.js",
+                lineNumber: 93,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "bg-white rounded-xl border border-slate-100 shadow-sm p-4",
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "flex items-center justify-between mb-3",
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "text-sm font-medium text-slate-700",
+                            children: "Appointments for selected date"
+                        }, void 0, false, {
+                            fileName: "[project]/clinic-suite/components/ConsultationSidebar.js",
+                            lineNumber: 108,
+                            columnNumber: 11
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "[project]/clinic-suite/components/ConsultationSidebar.js",
+                        lineNumber: 107,
+                        columnNumber: 9
+                    }, this),
+                    loadingMap && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "text-sm text-slate-500 py-4",
+                        children: "Loading patients..."
+                    }, void 0, false, {
+                        fileName: "[project]/clinic-suite/components/ConsultationSidebar.js",
+                        lineNumber: 112,
+                        columnNumber: 11
+                    }, this),
+                    error && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "text-sm text-red-600 py-2",
+                        children: [
+                            "Error: ",
+                            String(error)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/clinic-suite/components/ConsultationSidebar.js",
+                        lineNumber: 116,
+                        columnNumber: 11
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "space-y-2 max-h-[56vh] overflow-auto",
+                        children: [
+                            appointments.length === 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "text-sm text-slate-400 p-3",
+                                children: "No appointments for this date."
+                            }, void 0, false, {
+                                fileName: "[project]/clinic-suite/components/ConsultationSidebar.js",
+                                lineNumber: 121,
+                                columnNumber: 13
+                            }, this),
+                            appointments.map((appt)=>{
+                                const nic = String(appt.patientNic ?? '').trim();
+                                const patient = patientMap[nic];
+                                const firstName = patient?.firstName || patient?.givenName || patient?.name?.split?.(' ')?.[0] || '';
+                                const lastName = patient?.lastName || patient?.familyName || patient?.name && patient.name.split(' ').slice(1).join(' ') || '';
+                                const gender = patient && patient.gender ? String(patient.gender) : patient && patient.sex ? String(patient.sex) : '';
+                                const titleLine = firstName || lastName || gender ? `${[
+                                    firstName,
+                                    lastName
+                                ].filter(Boolean).join(' ')}${gender ? `, ${gender}` : ''}` : nic;
+                                const isSelected = selectedAppointmentId && selectedAppointmentId === appt.id;
+                                return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                    onClick: ()=>onSelect(appt),
+                                    className: `w-full text-left p-3 rounded-lg border ${isSelected ? 'border-indigo-200 bg-indigo-50' : 'border-transparent hover:border-slate-200'} `,
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "flex items-start justify-between",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                children: [
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                        className: "text-sm font-semibold text-slate-900",
+                                                        children: patient ? titleLine : nic
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/clinic-suite/components/ConsultationSidebar.js",
+                                                        lineNumber: 158,
+                                                        columnNumber: 21
+                                                    }, this),
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                        className: "text-xs text-slate-500 mt-0.5",
+                                                        children: [
+                                                            nic,
+                                                            " • ",
+                                                            appt.status || 'confirmed'
+                                                        ]
+                                                    }, void 0, true, {
+                                                        fileName: "[project]/clinic-suite/components/ConsultationSidebar.js",
+                                                        lineNumber: 161,
+                                                        columnNumber: 21
+                                                    }, this)
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "[project]/clinic-suite/components/ConsultationSidebar.js",
+                                                lineNumber: 157,
+                                                columnNumber: 19
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: "text-xs text-slate-500 ml-3",
+                                                children: formatTime(appt.scheduledAt)
+                                            }, void 0, false, {
+                                                fileName: "[project]/clinic-suite/components/ConsultationSidebar.js",
+                                                lineNumber: 165,
+                                                columnNumber: 19
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/clinic-suite/components/ConsultationSidebar.js",
+                                        lineNumber: 156,
+                                        columnNumber: 17
+                                    }, this)
+                                }, appt.id, false, {
+                                    fileName: "[project]/clinic-suite/components/ConsultationSidebar.js",
+                                    lineNumber: 151,
+                                    columnNumber: 15
+                                }, this);
+                            })
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/clinic-suite/components/ConsultationSidebar.js",
+                        lineNumber: 119,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "[project]/clinic-suite/components/ConsultationSidebar.js",
+                lineNumber: 106,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "[project]/clinic-suite/components/ConsultationSidebar.js",
+        lineNumber: 91,
+        columnNumber: 5
+    }, this);
+}
+_s(ConsultationSidebar, "MgqjiEVyyTNFVThNrwZGniDcm5g=");
+_c = ConsultationSidebar;
+var _c;
+__turbopack_context__.k.register(_c, "ConsultationSidebar");
+if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
+    __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
+}
+}),
 "[project]/clinic-suite/components/NewConsultationForm.js [app-client] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
@@ -1290,6 +1405,7 @@ function ConsultationDetailCard({ patient, appointment, clinicId, doctorEmail })
                         return;
                     }
                     try {
+                        // patient.id is expected to be the NIC (per your design)
                         const list = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$lib$2f$firestoreClient$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["fetchConsultationsForPatient"])(clinicId, patient.id);
                         setConsultations(list);
                     } catch (err) {
@@ -1303,6 +1419,31 @@ function ConsultationDetailCard({ patient, appointment, clinicId, doctorEmail })
         patient,
         clinicId
     ]);
+    function formatDateShort(iso) {
+        if (!iso) return '-';
+        try {
+            const d = new Date(iso);
+            // e.g., 22 Nov 1980
+            return d.toLocaleDateString(undefined, {
+                year: 'numeric',
+                month: 'short',
+                day: 'numeric'
+            });
+        } catch  {
+            return iso;
+        }
+    }
+    const firstName = patient?.firstName ?? patient?.givenName ?? '';
+    const lastName = patient?.lastName ?? patient?.familyName ?? '';
+    // allergies may be stored as array or string
+    function renderAllergies(allergyField) {
+        if (!allergyField) return '-';
+        if (Array.isArray(allergyField)) {
+            return allergyField.length ? allergyField.join(', ') : '-';
+        }
+        const s = String(allergyField).trim();
+        return s.length ? s : '-';
+    }
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "space-y-6",
         children: [
@@ -1311,54 +1452,96 @@ function ConsultationDetailCard({ patient, appointment, clinicId, doctorEmail })
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "flex items-start justify-between",
-                        children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "text-xs text-slate-400",
-                                        children: "Patient"
-                                    }, void 0, false, {
-                                        fileName: "[project]/clinic-suite/components/ConsultationDetailCard.js",
-                                        lineNumber: 33,
-                                        columnNumber: 13
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                                        className: "text-xl font-semibold",
-                                        children: patient ? `${patient.firstName ?? ''} ${patient.lastName ?? ''}` : 'No patient selected'
-                                    }, void 0, false, {
-                                        fileName: "[project]/clinic-suite/components/ConsultationDetailCard.js",
-                                        lineNumber: 34,
-                                        columnNumber: 13
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "text-sm text-slate-500 mt-1",
-                                        children: [
-                                            "NIC • ",
-                                            patient?.id ?? '-'
-                                        ]
-                                    }, void 0, true, {
-                                        fileName: "[project]/clinic-suite/components/ConsultationDetailCard.js",
-                                        lineNumber: 35,
-                                        columnNumber: 13
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "[project]/clinic-suite/components/ConsultationDetailCard.js",
-                                lineNumber: 32,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "text-sm text-slate-400",
-                                children: appointment ? new Date(appointment.scheduledAt).toLocaleString() : ''
-                            }, void 0, false, {
-                                fileName: "[project]/clinic-suite/components/ConsultationDetailCard.js",
-                                lineNumber: 37,
-                                columnNumber: 11
-                            }, this)
-                        ]
-                    }, void 0, true, {
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                                    className: "text-xl font-semibold",
+                                    children: patient ? `${firstName} ${lastName}`.trim() : 'No patient selected'
+                                }, void 0, false, {
+                                    fileName: "[project]/clinic-suite/components/ConsultationDetailCard.js",
+                                    lineNumber: 59,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "text-sm text-slate-500 mt-1",
+                                    children: [
+                                        "NIC: ",
+                                        patient?.id ?? '-'
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/clinic-suite/components/ConsultationDetailCard.js",
+                                    lineNumber: 62,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "mt-3 text-sm text-slate-600 space-y-1",
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
+                                                    children: "DOB:"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/clinic-suite/components/ConsultationDetailCard.js",
+                                                    lineNumber: 66,
+                                                    columnNumber: 20
+                                                }, this),
+                                                " ",
+                                                patient?.dob ? formatDateShort(patient.dob) : '-'
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/clinic-suite/components/ConsultationDetailCard.js",
+                                            lineNumber: 66,
+                                            columnNumber: 15
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
+                                                    children: "Gender:"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/clinic-suite/components/ConsultationDetailCard.js",
+                                                    lineNumber: 67,
+                                                    columnNumber: 20
+                                                }, this),
+                                                " ",
+                                                patient?.gender ?? patient?.sex ?? '-'
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/clinic-suite/components/ConsultationDetailCard.js",
+                                            lineNumber: 67,
+                                            columnNumber: 15
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
+                                                    children: "Allergies:"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/clinic-suite/components/ConsultationDetailCard.js",
+                                                    lineNumber: 68,
+                                                    columnNumber: 20
+                                                }, this),
+                                                " ",
+                                                renderAllergies(patient?.allergies)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/clinic-suite/components/ConsultationDetailCard.js",
+                                            lineNumber: 68,
+                                            columnNumber: 15
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/clinic-suite/components/ConsultationDetailCard.js",
+                                    lineNumber: 65,
+                                    columnNumber: 13
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/clinic-suite/components/ConsultationDetailCard.js",
+                            lineNumber: 58,
+                            columnNumber: 11
+                        }, this)
+                    }, void 0, false, {
                         fileName: "[project]/clinic-suite/components/ConsultationDetailCard.js",
-                        lineNumber: 31,
+                        lineNumber: 57,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1366,12 +1549,20 @@ function ConsultationDetailCard({ patient, appointment, clinicId, doctorEmail })
                         children: patient ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "font-medium text-sm mb-1",
+                                    children: "Contact Details:"
+                                }, void 0, false, {
+                                    fileName: "[project]/clinic-suite/components/ConsultationDetailCard.js",
+                                    lineNumber: 76,
+                                    columnNumber: 15
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
                                             children: "Phone:"
                                         }, void 0, false, {
                                             fileName: "[project]/clinic-suite/components/ConsultationDetailCard.js",
-                                            lineNumber: 43,
+                                            lineNumber: 77,
                                             columnNumber: 20
                                         }, this),
                                         " ",
@@ -1379,7 +1570,7 @@ function ConsultationDetailCard({ patient, appointment, clinicId, doctorEmail })
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/clinic-suite/components/ConsultationDetailCard.js",
-                                    lineNumber: 43,
+                                    lineNumber: 77,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1388,7 +1579,7 @@ function ConsultationDetailCard({ patient, appointment, clinicId, doctorEmail })
                                             children: "Address:"
                                         }, void 0, false, {
                                             fileName: "[project]/clinic-suite/components/ConsultationDetailCard.js",
-                                            lineNumber: 44,
+                                            lineNumber: 78,
                                             columnNumber: 20
                                         }, this),
                                         " ",
@@ -1396,7 +1587,7 @@ function ConsultationDetailCard({ patient, appointment, clinicId, doctorEmail })
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/clinic-suite/components/ConsultationDetailCard.js",
-                                    lineNumber: 44,
+                                    lineNumber: 78,
                                     columnNumber: 15
                                 }, this)
                             ]
@@ -1404,18 +1595,18 @@ function ConsultationDetailCard({ patient, appointment, clinicId, doctorEmail })
                             children: "Select a patient or appointment to begin."
                         }, void 0, false, {
                             fileName: "[project]/clinic-suite/components/ConsultationDetailCard.js",
-                            lineNumber: 46,
+                            lineNumber: 80,
                             columnNumber: 15
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/clinic-suite/components/ConsultationDetailCard.js",
-                        lineNumber: 40,
+                        lineNumber: 73,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/clinic-suite/components/ConsultationDetailCard.js",
-                lineNumber: 30,
+                lineNumber: 56,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1426,7 +1617,7 @@ function ConsultationDetailCard({ patient, appointment, clinicId, doctorEmail })
                         children: "Appointment details"
                     }, void 0, false, {
                         fileName: "[project]/clinic-suite/components/ConsultationDetailCard.js",
-                        lineNumber: 51,
+                        lineNumber: 85,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1439,7 +1630,7 @@ function ConsultationDetailCard({ patient, appointment, clinicId, doctorEmail })
                                             children: "Time:"
                                         }, void 0, false, {
                                             fileName: "[project]/clinic-suite/components/ConsultationDetailCard.js",
-                                            lineNumber: 55,
+                                            lineNumber: 89,
                                             columnNumber: 20
                                         }, this),
                                         " ",
@@ -1447,7 +1638,7 @@ function ConsultationDetailCard({ patient, appointment, clinicId, doctorEmail })
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/clinic-suite/components/ConsultationDetailCard.js",
-                                    lineNumber: 55,
+                                    lineNumber: 89,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1456,7 +1647,7 @@ function ConsultationDetailCard({ patient, appointment, clinicId, doctorEmail })
                                             children: "Status:"
                                         }, void 0, false, {
                                             fileName: "[project]/clinic-suite/components/ConsultationDetailCard.js",
-                                            lineNumber: 56,
+                                            lineNumber: 90,
                                             columnNumber: 20
                                         }, this),
                                         " ",
@@ -1464,7 +1655,7 @@ function ConsultationDetailCard({ patient, appointment, clinicId, doctorEmail })
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/clinic-suite/components/ConsultationDetailCard.js",
-                                    lineNumber: 56,
+                                    lineNumber: 90,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1473,7 +1664,7 @@ function ConsultationDetailCard({ patient, appointment, clinicId, doctorEmail })
                                             children: "Notes:"
                                         }, void 0, false, {
                                             fileName: "[project]/clinic-suite/components/ConsultationDetailCard.js",
-                                            lineNumber: 57,
+                                            lineNumber: 91,
                                             columnNumber: 20
                                         }, this),
                                         " ",
@@ -1481,7 +1672,7 @@ function ConsultationDetailCard({ patient, appointment, clinicId, doctorEmail })
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/clinic-suite/components/ConsultationDetailCard.js",
-                                    lineNumber: 57,
+                                    lineNumber: 91,
                                     columnNumber: 15
                                 }, this)
                             ]
@@ -1490,18 +1681,18 @@ function ConsultationDetailCard({ patient, appointment, clinicId, doctorEmail })
                             children: "No appointment selected."
                         }, void 0, false, {
                             fileName: "[project]/clinic-suite/components/ConsultationDetailCard.js",
-                            lineNumber: 59,
+                            lineNumber: 93,
                             columnNumber: 15
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/clinic-suite/components/ConsultationDetailCard.js",
-                        lineNumber: 52,
+                        lineNumber: 86,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/clinic-suite/components/ConsultationDetailCard.js",
-                lineNumber: 50,
+                lineNumber: 84,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1512,15 +1703,7 @@ function ConsultationDetailCard({ patient, appointment, clinicId, doctorEmail })
                         children: "Consultation"
                     }, void 0, false, {
                         fileName: "[project]/clinic-suite/components/ConsultationDetailCard.js",
-                        lineNumber: 64,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "text-sm text-slate-600 mt-2",
-                        children: "Only doctors can create and view consultations."
-                    }, void 0, false, {
-                        fileName: "[project]/clinic-suite/components/ConsultationDetailCard.js",
-                        lineNumber: 65,
+                        lineNumber: 98,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1532,24 +1715,28 @@ function ConsultationDetailCard({ patient, appointment, clinicId, doctorEmail })
                             doctorEmail: doctorEmail,
                             onSaved: (created)=>{
                                 (async ()=>{
-                                    const list = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$lib$2f$firestoreClient$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["fetchConsultationsForPatient"])(clinicId, patient.id);
-                                    setConsultations(list);
+                                    try {
+                                        const list = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$lib$2f$firestoreClient$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["fetchConsultationsForPatient"])(clinicId, patient.id);
+                                        setConsultations(list);
+                                    } catch (err) {
+                                        console.error(err);
+                                    }
                                 })();
                             }
                         }, void 0, false, {
                             fileName: "[project]/clinic-suite/components/ConsultationDetailCard.js",
-                            lineNumber: 68,
+                            lineNumber: 100,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/clinic-suite/components/ConsultationDetailCard.js",
-                        lineNumber: 67,
+                        lineNumber: 99,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/clinic-suite/components/ConsultationDetailCard.js",
-                lineNumber: 63,
+                lineNumber: 97,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1560,7 +1747,7 @@ function ConsultationDetailCard({ patient, appointment, clinicId, doctorEmail })
                         children: "Previous Consultations"
                     }, void 0, false, {
                         fileName: "[project]/clinic-suite/components/ConsultationDetailCard.js",
-                        lineNumber: 84,
+                        lineNumber: 120,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1571,7 +1758,7 @@ function ConsultationDetailCard({ patient, appointment, clinicId, doctorEmail })
                                 children: "No consultations yet"
                             }, void 0, false, {
                                 fileName: "[project]/clinic-suite/components/ConsultationDetailCard.js",
-                                lineNumber: 86,
+                                lineNumber: 122,
                                 columnNumber: 42
                             }, this),
                             consultations.map((c)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1585,7 +1772,7 @@ function ConsultationDetailCard({ patient, appointment, clinicId, doctorEmail })
                                                     children: new Date(c.createdAt).toLocaleString()
                                                 }, void 0, false, {
                                                     fileName: "[project]/clinic-suite/components/ConsultationDetailCard.js",
-                                                    lineNumber: 90,
+                                                    lineNumber: 126,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1593,13 +1780,13 @@ function ConsultationDetailCard({ patient, appointment, clinicId, doctorEmail })
                                                     children: c.id
                                                 }, void 0, false, {
                                                     fileName: "[project]/clinic-suite/components/ConsultationDetailCard.js",
-                                                    lineNumber: 91,
+                                                    lineNumber: 127,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/clinic-suite/components/ConsultationDetailCard.js",
-                                            lineNumber: 89,
+                                            lineNumber: 125,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1609,7 +1796,7 @@ function ConsultationDetailCard({ patient, appointment, clinicId, doctorEmail })
                                                     children: "Complaint:"
                                                 }, void 0, false, {
                                                     fileName: "[project]/clinic-suite/components/ConsultationDetailCard.js",
-                                                    lineNumber: 93,
+                                                    lineNumber: 129,
                                                     columnNumber: 60
                                                 }, this),
                                                 " ",
@@ -1617,7 +1804,7 @@ function ConsultationDetailCard({ patient, appointment, clinicId, doctorEmail })
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/clinic-suite/components/ConsultationDetailCard.js",
-                                            lineNumber: 93,
+                                            lineNumber: 129,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1627,7 +1814,7 @@ function ConsultationDetailCard({ patient, appointment, clinicId, doctorEmail })
                                                     children: "Management:"
                                                 }, void 0, false, {
                                                     fileName: "[project]/clinic-suite/components/ConsultationDetailCard.js",
-                                                    lineNumber: 94,
+                                                    lineNumber: 130,
                                                     columnNumber: 60
                                                 }, this),
                                                 " ",
@@ -1635,31 +1822,31 @@ function ConsultationDetailCard({ patient, appointment, clinicId, doctorEmail })
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/clinic-suite/components/ConsultationDetailCard.js",
-                                            lineNumber: 94,
+                                            lineNumber: 130,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, c.id, true, {
                                     fileName: "[project]/clinic-suite/components/ConsultationDetailCard.js",
-                                    lineNumber: 88,
+                                    lineNumber: 124,
                                     columnNumber: 13
                                 }, this))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/clinic-suite/components/ConsultationDetailCard.js",
-                        lineNumber: 85,
+                        lineNumber: 121,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/clinic-suite/components/ConsultationDetailCard.js",
-                lineNumber: 83,
+                lineNumber: 119,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/clinic-suite/components/ConsultationDetailCard.js",
-        lineNumber: 29,
+        lineNumber: 55,
         columnNumber: 5
     }, this);
 }
@@ -1719,13 +1906,15 @@ function ConsultationPage() {
                 "ConsultationPage.useEffect.unsub": (err)=>setError(err.message || String(err))
             }["ConsultationPage.useEffect.unsub"]);
             return ({
-                "ConsultationPage.useEffect": ()=>unsub()
+                "ConsultationPage.useEffect": ()=>{
+                    if (typeof unsub === 'function') unsub();
+                }
             })["ConsultationPage.useEffect"];
         }
     }["ConsultationPage.useEffect"], [
         isAuthReady,
         isDoctor,
-        claims,
+        claims?.clinicId,
         date
     ]);
     // when user selects an appointment, load the patient
@@ -1760,12 +1949,12 @@ function ConsultationPage() {
                 children: "Loading authentication..."
             }, void 0, false, {
                 fileName: "[project]/clinic-suite/app/consultation/page.js",
-                lineNumber: 63,
+                lineNumber: 70,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "[project]/clinic-suite/app/consultation/page.js",
-            lineNumber: 62,
+            lineNumber: 69,
             columnNumber: 7
         }, this);
     }
@@ -1780,7 +1969,7 @@ function ConsultationPage() {
                         children: "Sign in required"
                     }, void 0, false, {
                         fileName: "[project]/clinic-suite/app/consultation/page.js",
-                        lineNumber: 72,
+                        lineNumber: 79,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1788,7 +1977,7 @@ function ConsultationPage() {
                         children: "You must be signed in to access the Consultation area."
                     }, void 0, false, {
                         fileName: "[project]/clinic-suite/app/consultation/page.js",
-                        lineNumber: 73,
+                        lineNumber: 80,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1799,23 +1988,23 @@ function ConsultationPage() {
                             children: "Go to login"
                         }, void 0, false, {
                             fileName: "[project]/clinic-suite/app/consultation/page.js",
-                            lineNumber: 75,
+                            lineNumber: 82,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/clinic-suite/app/consultation/page.js",
-                        lineNumber: 74,
+                        lineNumber: 81,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/clinic-suite/app/consultation/page.js",
-                lineNumber: 71,
+                lineNumber: 78,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "[project]/clinic-suite/app/consultation/page.js",
-            lineNumber: 70,
+            lineNumber: 77,
             columnNumber: 7
         }, this);
     }
@@ -1831,7 +2020,7 @@ function ConsultationPage() {
                         children: "Access denied"
                     }, void 0, false, {
                         fileName: "[project]/clinic-suite/app/consultation/page.js",
-                        lineNumber: 87,
+                        lineNumber: 94,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1839,7 +2028,7 @@ function ConsultationPage() {
                         children: "Your account does not have permission to access the Consultation area."
                     }, void 0, false, {
                         fileName: "[project]/clinic-suite/app/consultation/page.js",
-                        lineNumber: 88,
+                        lineNumber: 95,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1851,7 +2040,7 @@ function ConsultationPage() {
                                         children: "Role:"
                                     }, void 0, false, {
                                         fileName: "[project]/clinic-suite/app/consultation/page.js",
-                                        lineNumber: 91,
+                                        lineNumber: 98,
                                         columnNumber: 16
                                     }, this),
                                     " ",
@@ -1859,7 +2048,7 @@ function ConsultationPage() {
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/clinic-suite/app/consultation/page.js",
-                                lineNumber: 91,
+                                lineNumber: 98,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1868,7 +2057,7 @@ function ConsultationPage() {
                                         children: "Clinic:"
                                     }, void 0, false, {
                                         fileName: "[project]/clinic-suite/app/consultation/page.js",
-                                        lineNumber: 92,
+                                        lineNumber: 99,
                                         columnNumber: 16
                                     }, this),
                                     " ",
@@ -1876,13 +2065,13 @@ function ConsultationPage() {
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/clinic-suite/app/consultation/page.js",
-                                lineNumber: 92,
+                                lineNumber: 99,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/clinic-suite/app/consultation/page.js",
-                        lineNumber: 90,
+                        lineNumber: 97,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1893,12 +2082,12 @@ function ConsultationPage() {
                             children: "Back to home"
                         }, void 0, false, {
                             fileName: "[project]/clinic-suite/app/consultation/page.js",
-                            lineNumber: 96,
+                            lineNumber: 103,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/clinic-suite/app/consultation/page.js",
-                        lineNumber: 95,
+                        lineNumber: 102,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1909,25 +2098,25 @@ function ConsultationPage() {
                                 children: "doctor"
                             }, void 0, false, {
                                 fileName: "[project]/clinic-suite/app/consultation/page.js",
-                                lineNumber: 100,
+                                lineNumber: 107,
                                 columnNumber: 67
                             }, this),
                             ". Contact your administrator to get access."
                         ]
                     }, void 0, true, {
                         fileName: "[project]/clinic-suite/app/consultation/page.js",
-                        lineNumber: 99,
+                        lineNumber: 106,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/clinic-suite/app/consultation/page.js",
-                lineNumber: 86,
+                lineNumber: 93,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "[project]/clinic-suite/app/consultation/page.js",
-            lineNumber: 85,
+            lineNumber: 92,
             columnNumber: 7
         }, this);
     }
@@ -1941,18 +2130,18 @@ function ConsultationPage() {
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("aside", {
                         className: "lg:col-span-3",
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$components$2f$ConsultationSidebar$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                            clinicId: clinicId,
-                            appointments: appointmentsForSelectedDate,
+                            clinicId: claims.clinicId,
+                            appointments: appointments,
                             selectedAppointmentId: selectedAppointment?.id,
-                            onSelect: (appt)=>setSelectedAppointment(appt)
+                            onSelect: handleSelectAppointment
                         }, void 0, false, {
                             fileName: "[project]/clinic-suite/app/consultation/page.js",
-                            lineNumber: 112,
+                            lineNumber: 119,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/clinic-suite/app/consultation/page.js",
-                        lineNumber: 111,
+                        lineNumber: 118,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("main", {
@@ -1964,12 +2153,12 @@ function ConsultationPage() {
                             doctorEmail: user?.email
                         }, void 0, false, {
                             fileName: "[project]/clinic-suite/app/consultation/page.js",
-                            lineNumber: 121,
+                            lineNumber: 128,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/clinic-suite/app/consultation/page.js",
-                        lineNumber: 120,
+                        lineNumber: 127,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("aside", {
@@ -1984,7 +2173,7 @@ function ConsultationPage() {
                                         children: "Quick actions"
                                     }, void 0, false, {
                                         fileName: "[project]/clinic-suite/app/consultation/page.js",
-                                        lineNumber: 132,
+                                        lineNumber: 139,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1999,7 +2188,7 @@ function ConsultationPage() {
                                                 children: "Clear selection"
                                             }, void 0, false, {
                                                 fileName: "[project]/clinic-suite/app/consultation/page.js",
-                                                lineNumber: 134,
+                                                lineNumber: 141,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -2008,35 +2197,35 @@ function ConsultationPage() {
                                                 children: "Refresh"
                                             }, void 0, false, {
                                                 fileName: "[project]/clinic-suite/app/consultation/page.js",
-                                                lineNumber: 135,
+                                                lineNumber: 142,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/clinic-suite/app/consultation/page.js",
-                                        lineNumber: 133,
+                                        lineNumber: 140,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/clinic-suite/app/consultation/page.js",
-                                lineNumber: 131,
+                                lineNumber: 138,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/clinic-suite/app/consultation/page.js",
-                            lineNumber: 130,
+                            lineNumber: 137,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/clinic-suite/app/consultation/page.js",
-                        lineNumber: 129,
+                        lineNumber: 136,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/clinic-suite/app/consultation/page.js",
-                lineNumber: 110,
+                lineNumber: 117,
                 columnNumber: 7
             }, this),
             error && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2046,22 +2235,22 @@ function ConsultationPage() {
                     children: error
                 }, void 0, false, {
                     fileName: "[project]/clinic-suite/app/consultation/page.js",
-                    lineNumber: 144,
+                    lineNumber: 151,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/clinic-suite/app/consultation/page.js",
-                lineNumber: 143,
+                lineNumber: 150,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/clinic-suite/app/consultation/page.js",
-        lineNumber: 109,
+        lineNumber: 116,
         columnNumber: 5
     }, this);
 }
-_s(ConsultationPage, "XtAM2F2ORk/+4TNlID1lVaHzfto=", false, function() {
+_s(ConsultationPage, "MIz+446rw9jfGRxuRFFjOqNvO5c=", false, function() {
     return [
         __TURBOPACK__imported__module__$5b$project$5d2f$clinic$2d$suite$2f$components$2f$AuthProvider$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useAuth"]
     ];
@@ -2075,4 +2264,4 @@ if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelper
 }),
 ]);
 
-//# sourceMappingURL=clinic-suite_fb0d6d47._.js.map
+//# sourceMappingURL=clinic-suite_6214f195._.js.map
